@@ -1,11 +1,11 @@
 import Vue from 'vue'
-import Hello from '@/components/Hello'
+import Home from '@/pages/homePage'
 
-describe('Hello.vue', () => {
-  it('should render correct contents', () => {
-    const Constructor = Vue.extend(Hello)
-    const vm = new Constructor().$mount()
-    expect(vm.$el.querySelector('.hello h1').textContent)
-      .to.equal('Welcome to Your Vue.js PWA')
-  })
+describe('homePage.vue', () => {
+	it('should render correct contents', () => {
+		const Constructor = Vue.extend(Home)
+		const vm = new Constructor().$mount()
+		expect(vm.$el.querySelector('.title .text-center').textContent)
+			.to.equal('Foo')
+	})
 })
