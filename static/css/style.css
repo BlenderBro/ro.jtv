@@ -1310,6 +1310,7 @@ img{
 }
 
 .main-header.header-style-five .header-lower{
+	background-color: rgba(0,0,0,0.60);
 	border-bottom:1px solid rgba(255,255,255,0.60);
 }
 
@@ -3487,6 +3488,7 @@ img{
 .main-footer{
 	position:relative;
 	padding:80px 0px 0px;
+	background-color: #272727;
 }
 
 .main-footer .footer-widget{

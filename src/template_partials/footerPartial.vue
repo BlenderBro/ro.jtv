@@ -1,6 +1,6 @@
 <template>
 	<!--Main Footer-->
-	<footer class="main-footer" style="background-image:url(static/images/background/6.jpg)">
+	<footer class="main-footer">
 
 		<div class="auto-container">
 		
