@@ -16,7 +16,7 @@
 							<div class="footer-column col-md-7 col-sm-6 col-xs-12">
 								<div class="footer-widget logo-widget">
 									<div class="logo">
-										<a href="index.html"><img src="static/images/footer-logo.png" alt="" /></a>
+										<a href="index.html"><img src="../assets/jtv_logo.png" alt="" /></a>
 									</div>
 									<div class="text">Thewebmax ipsum amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore agna aliquam erat. ipsum dolor sit amet, consectetuer adipiscing. ipsum dolor sit .</div>
 								</div>
@@ -94,15 +94,14 @@
 			<div class="auto-container">
 				<div class="row clearfix">
 					<div class="column col-md-6 col-sm-12 col-xs-12">
-						<div class="copyright">Copyrights 2018. All Rights are Reserved by <a href="#">expert-themes</a></div>
+						<div class="copyright">©jTV {{year}}. Toate drepturile blabla</div>
 					</div>
 					<div class="column col-md-6 col-sm-12 col-xs-12">
 						<ul class="footer-nav">
-							<li><a href="#">Home</a></li>
-							<li><a href="#">About</a></li>
-							<li><a href="#">Services</a></li>
-							<li><a href="#">Projects</a></li>
-							<li><a href="#">Blogs</a></li>
+							<li><a href="#">Item 1</a></li>
+							<li><a href="#">Item 2</a></li>
+							<li><a href="#">Item 3</a></li>
+							<li><a href="#">Item 4</a></li>
 							<li><a href="#">Contact</a></li>
 						</ul>
 					</div>
@@ -118,8 +117,12 @@ export default {
 	name: 'Footer',
 	data() {
 		return {
-
-		};
+			year: ''
+		}
+	},
+	created: function(){
+		let year = new Date().getFullYear()
+		this.year = year
 	}
 }
 </script>
