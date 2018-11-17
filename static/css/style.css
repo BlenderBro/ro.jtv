@@ -931,7 +931,8 @@ img{
 /*Header Style Five*/
 
 .header-style-five{
-	position:absolute;
+	/* position:absolute; */
+	display: block;
 	border:none;
 }
 

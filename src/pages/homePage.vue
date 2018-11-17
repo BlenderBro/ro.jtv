@@ -1,9 +1,7 @@
 <template>
 <div>
-	<!-- <MainSliderComp></MainSliderComp> -->
-	<StreamComp></StreamComp>
-	
-	<!--About Section-->
+	<MainSliderComp></MainSliderComp>
+		<!--About Section-->
 	<section class="about-section">
 		<div class="auto-container">
 			<div class="row clearfix">
@@ -39,12 +37,10 @@
 
 <script>
 import MainSliderComp from '@/components/MainSliderComponent'
-import StreamComp from '@/components/StreamComponent'
 export default {
 	name: 'Home',
   	components: {
-		  MainSliderComp,
-		  StreamComp
+		  MainSliderComp
 	  }
 }
 </script>
