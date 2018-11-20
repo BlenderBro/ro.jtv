@@ -17,8 +17,8 @@
 						<div class="upper-column info-box">
 							<div class="icon-box"><span class="flaticon-clock"></span></div>
 							<ul>
-								<li><strong>09:00 am - 06:00 pm</strong></li>
-								<li>We Serve with Pleasure</li>
+								<li><strong>24/24</strong></li>
+								<li>Proram nonstop</li>
 							</ul>
 						</div>
 						
@@ -26,8 +26,8 @@
 						<div class="upper-column info-box">
 							<div class="icon-box"><span class="flaticon-phone-call"></span></div>
 							<ul>
-								<li><strong>(01) 98 756 321 01</strong></li>
-								<li>Discuss any Queries</li>
+								<li><strong>+40 741 330 100</strong></li>
+								<li>Contact</li>
 							</ul>
 						</div>
 						
@@ -65,8 +65,15 @@
 						
 						<div class="navbar-collapse collapse clearfix">
 							<ul class="navigation clearfix">
-								<li class="current dropdown"><a href="#">Item1</a></li>
-								<li class="dropdown"><a href="#">Item 2</a></li>
+								<li class="current dropdown"><a href="#">Despre Noi</a></li>
+								<li class="dropdown"><a href="#">Program TV</a></li>
+								<li class="dropdown"><a href="#">Oferte de munca</a>
+									<ul>
+                                        <li><a href="#">Uniunea Europeana</a></li>
+                                        <li><a href="#">Romania</a></li>
+                                    </ul>
+								</li>
+								<li class="dropdown"><a href="#">Aplica CV</a></li>
 								<li><a href="#">Contact</a></li>
 							</ul>
 						</div>
@@ -122,9 +129,16 @@
 						
 						<div class="navbar-collapse collapse clearfix">
 							<ul class="navigation clearfix">
-								<li class="current dropdown"><a href="#">Item 1</a></li>
-								<li class="dropdown"><a href="#">Item 2</a></li>								
-								<li><a href="contact.html">Contact us</a></li>
+								<li class="current dropdown"><a href="#">Despre Noi</a></li>
+								<li class="dropdown"><a href="#">Program TV</a></li>
+								<li class="dropdown"><a href="#">Oferte de munca</a>
+									<ul>
+                                        <li><a href="#">Uniunea Europeana</a></li>
+                                        <li><a href="#">Romania</a></li>
+                                    </ul>
+								</li>
+								<li class="dropdown"><a href="#">Aplica CV</a></li>
+								<li><a href="#">Contact</a></li>
 							</ul>
 						</div>
 					</nav><!-- Main Menu End-->
