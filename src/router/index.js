@@ -4,7 +4,10 @@ import Router from 'vue-router'
 // import pages here
 import PageNotFound from '@/pages/404'
 import Home from '@/pages/homePage'
+import Schedule from '@/pages/schedulePage'
 import WatchStream from '@/pages/watchStreamPage'
+import Contact from '@/pages/contactPage'
+
 
 
 Vue.use(Router)
@@ -18,6 +21,8 @@ export default new Router({
 	routes: [
 		{path: '*', name:'404', component: PageNotFound},
 		{ path: '/', name: 'Home', component: Home },
+		{ path: '/program', name: 'Schedule', component: Schedule },
+		{ path: '/contact', name: 'Contact', component: Contact },
 		{ path: '/live', name: 'WatchStream', component: WatchStream }
 	]
 })

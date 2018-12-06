@@ -8,7 +8,7 @@
 				<div class="clearfix">
 					
 					<div class="pull-left logo-box">
-						<div class="logo"><a href="index.html"><img src="../assets/jtv_logo.png" alt="" title=""></a></div>
+						<a href="/" class="img-responsive"><img src="../assets/jtv_logo.png" alt="" title=""></a>
 					</div>
 					
 					<div class="pull-right upper-right clearfix">
@@ -17,8 +17,8 @@
 						<div class="upper-column info-box">
 							<div class="icon-box"><span class="flaticon-clock"></span></div>
 							<ul>
-								<li><strong>24/24</strong></li>
-								<li>Proram nonstop</li>
+								<li><strong>ON AIR</strong></li>
+								<li>Intra cu noi IN DIRECT</li>
 							</ul>
 						</div>
 						
@@ -35,8 +35,8 @@
 						<div class="upper-column info-box">
 							<div class="icon-box"><span class="flaticon-placeholder-1"></span></div>
 							<ul>
-								<li><strong>location</strong></li>
-								<li>185, Los Angeles, USA</li>
+								<li><strong>BUCURESTI</strong></li>
+								<li>Mendeleev 37, sect. 1</li>
 							</ul>
 						</div>
 						
@@ -65,8 +65,8 @@
 						
 						<div class="navbar-collapse collapse clearfix">
 							<ul class="navigation clearfix">
-								<li class="current dropdown"><a href="#">Despre Noi</a></li>
-								<li class="dropdown"><a href="#">Program TV</a></li>
+								<li class="dropdown"><a href="#">Despre Noi</a></li>
+								<li class="dropdown"><router-link to="/program">Program TV</router-link></li>
 								<li class="dropdown"><a href="#">Oferte de munca</a>
 									<ul>
                                         <li><a href="#">Uniunea Europeana</a></li>
@@ -74,7 +74,8 @@
                                     </ul>
 								</li>
 								<li class="dropdown"><a href="#">Aplica CV</a></li>
-								<li><a href="#">Contact</a></li>
+								<li class="dropdown"><a href="#">Echipa</a></li>
+								<li class="dropdown"><router-link to="/contact">Contact</router-link></li>
 							</ul>
 						</div>
 					</nav>
@@ -111,7 +112,7 @@
 			<div class="auto-container clearfix">
 				<!--Logo-->
 				<div class="logo pull-left">
-					<a href="index.html" class="img-responsive"><img src="../assets/jtv_logo_small.png" alt="" title=""></a>
+					<a href="/" class="img-responsive"><img src="../assets/jtv_logo_small.png" alt="" title=""></a>
 				</div>
 				
 				<!--Right Col-->
@@ -129,8 +130,8 @@
 						
 						<div class="navbar-collapse collapse clearfix">
 							<ul class="navigation clearfix">
-								<li class="current dropdown"><a href="#">Despre Noi</a></li>
-								<li class="dropdown"><a href="#">Program TV</a></li>
+								<li class="dropdown"><a href="#">Despre Noi</a></li>
+								<li><router-link to="/program">Program TV</router-link></li>
 								<li class="dropdown"><a href="#">Oferte de munca</a>
 									<ul>
                                         <li><a href="#">Uniunea Europeana</a></li>
@@ -138,7 +139,8 @@
                                     </ul>
 								</li>
 								<li class="dropdown"><a href="#">Aplica CV</a></li>
-								<li><a href="#">Contact</a></li>
+								<li class="dropdown"><a href="#">Echipa</a></li>
+								<li><router-link to="/contact">Contact</router-link></li>
 							</ul>
 						</div>
 					</nav><!-- Main Menu End-->

@@ -23,9 +23,9 @@
 <meta name="msapplication-TileColor" content="#000000">
 <!-- Stylesheets -->
 <link href="/static/css/bootstrap.css" rel="stylesheet" type="text/css">
-<link href="/static/plugins/revolution/css/settings.css" rel="stylesheet" type="text/css"><!-- REVOLUTION SETTINGS STYLES -->
-<link href="/static/plugins/revolution/css/layers.css" rel="stylesheet" type="text/css"><!-- REVOLUTION LAYERS STYLES -->
-<link href="/static/plugins/revolution/css/navigation.css" rel="stylesheet" type="text/css"><!-- REVOLUTION NAVIGATION STYLES -->
+<!-- <link href="/static/plugins/revolution/css/settings.css" rel="stylesheet" type="text/css">
+<link href="/static/plugins/revolution/css/layers.css" rel="stylesheet" type="text/css">
+<link href="/static/plugins/revolution/css/navigation.css" rel="stylesheet" type="text/css"> -->
 <link href="/static/css/style.css" rel="stylesheet" type="text/css">
 <link href="/static/css/responsive.css" rel="stylesheet" type="text/css">
 <% for (var chunk of webpack.chunks) {
@@ -50,7 +50,9 @@
 <body>
 	<!-- Preloader -->
 	<div class="preloader"></div>
-	<div id="app"></div>
+	<div id="app">
+		<%= htmlWebpackPlugin.options.serviceWorkerLoader %>
+	</div>
 <!--End pagewrapper-->
 
 <!--Scroll to top-->
@@ -78,8 +80,8 @@
 <script src="static/js/owl.js"></script>
 <script src="static/js/wow.js"></script>
 <script src="static/js/jquery-ui.js"></script>
-<script src="static/js/script.js"></script>
 <script src="static/js/color-settings.js"></script>
+<script src="static/js/script.js"></script>
 
 </body>
 </html>

@@ -148,6 +148,17 @@ img{
 	display:inline-block;
 	max-width:100%;
 }
+.col-md-3.ads img{
+	width: 230px;
+	height: 110px;
+	display: block !important;
+	margin: auto;
+	/* text-align: center; */
+}
+.ads{
+	/* margin-bottom: 2em; */
+	padding: 0 2em 0 2em;
+}
 
 .theme-btn{
 	display:inline-block;
@@ -1477,6 +1488,10 @@ img{
 
 .sticky-header .main-menu .navigation > li:hover > a,
 .sticky-header .main-menu .navigation > li.current > a{
+	color:#f16724;
+	background-color:inherit !important;
+}
+.router-link-exact-active .router-link-active{
 	color:#f16724;
 	background-color:inherit !important;
 }

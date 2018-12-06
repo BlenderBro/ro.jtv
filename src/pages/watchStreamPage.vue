@@ -14,6 +14,11 @@
 </template>
 <script>
 export default {
-    name: 'WatchStream'
+	name: 'WatchStream',
+	mounted: function(){
+		// show as active in menu
+		let activeRouteParent = document.querySelector('.router-link-active').closest('li');
+		activeRouteParent.classList.add('current')	
+	}
 }
 </script>
