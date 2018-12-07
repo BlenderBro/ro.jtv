@@ -16,7 +16,17 @@
 		<section class="faq-page-section">
 			<div class="auto-container">
 				<div class="row clearfix">
-									
+					<div class="sec-title">
+						<h2>De luni pana vineri:</h2>
+					</div>
+					<div class="col-md-4 col-xs-4 title">
+						<span class="hours">06:00 - 08:00</span> 
+						<p>NEAȚA COOLINARĂ</p>
+					</div>
+					<div class="col-md-8 col-xs-8 desc">
+						<p>Emisiune care prezintă pregătirea unui meniu, interviuri si recomandări ale unor chefi bucătari depre cantitatea de proteine și vitamine din alimentație, în functie de munca pe care o desfașurăm. 
+Anunțuri de angajare în domeniul Horecca</p>
+					</div>			
 				</div>
 			</div>
 		</section>
@@ -26,25 +36,21 @@
 <script>
 export default {
 	name:'SchedulePage',
-	mounted: function(){
-
-		//remove current active
-		// let activeRoute = document.querySelectorAll('li.dropdown');
-		// console.log(activeRoute)
-		// if(activeRoute.length > 0){
-		// 	for(let i=0; i<activeRoute.length; i++){
-		// 		activeRoute[i].classList.remove('current');
-		// 	}
-			
-		// }
-		// console.log(activeRoute)
-
-		// // show as active in menu
-		// let activeRouteParent = document.querySelector('.router-link-active').closest('li');
-		// activeRouteParent.classList.add('current');
-		// console.log('program')
-	}
 }
 </script>
+<style scoped>
+span.hours{
+	color:coral;
+	font-size: 1.1em;
+}
+.title p{
+	font-weight: 600;
+	font-size: 1.2em;
+}
+.desc p{
+	font-size: 1em;
+}
+</style>
+
 
 

@@ -74,7 +74,7 @@
                                     </ul>
 								</li>
 								<li class="dropdown"><a href="#">Aplica CV</a></li>
-								<li class="dropdown"><a href="#">Echipa</a></li>
+								<li class="dropdown"><router-link to="/echipa">Echipa</router-link></li>
 								<li class="dropdown"><router-link to="/contact">Contact</router-link></li>
 							</ul>
 						</div>
@@ -131,7 +131,7 @@
 						<div class="navbar-collapse collapse clearfix">
 							<ul class="navigation clearfix">
 								<li class="dropdown"><a href="#">Despre Noi</a></li>
-								<li><router-link to="/program">Program TV</router-link></li>
+								<li class="dropdown"><router-link to="/program">Program TV</router-link></li>
 								<li class="dropdown"><a href="#">Oferte de munca</a>
 									<ul>
                                         <li><a href="#">Uniunea Europeana</a></li>
@@ -139,8 +139,8 @@
                                     </ul>
 								</li>
 								<li class="dropdown"><a href="#">Aplica CV</a></li>
-								<li class="dropdown"><a href="#">Echipa</a></li>
-								<li><router-link to="/contact">Contact</router-link></li>
+								<li class="dropdown"><router-link to="/echipa">Echipa</router-link></li>
+								<li class="dropdown"><router-link to="/contact">Contact</router-link></li>
 							</ul>
 						</div>
 					</nav><!-- Main Menu End-->
@@ -157,10 +157,10 @@
 <script>
 export default {
 	name: 'Header',
-	data() {
+	data: function(){
 		return {
-			//nothing for now...
-		};
+			selected: undefined
+		}
 	}
 };
 </script>
