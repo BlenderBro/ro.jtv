@@ -201,6 +201,9 @@
 		visibility:hidden;
 		opacity:0;
 	}
+	.page-title{
+		padding: 90px 0px 0px;
+	}
 }
 
 @media only screen and (max-width: 1023px){
@@ -313,6 +316,9 @@
 		padding-left:0px;
 		padding-top:0px;
 	}*/
+	.main-header.header-style-five .header-upper .upper-right{
+		display: none;
+	}
 	
 	.main-header .header-top .top-right .social-nav{
 		margin-left:0px;
@@ -949,7 +955,7 @@
 	}
 	
 	.page-title{
-		padding:100px 0px 0px;
+		padding:80px 0px 0px;
 	}
 	
 	.page-title h1{
