@@ -4,6 +4,7 @@ import Router from 'vue-router'
 // import pages here
 import PageNotFound from '@/pages/404'
 import Home from '@/pages/homePage'
+import About from '@/pages/aboutPage'
 import Schedule from '@/pages/schedulePage'
 import EUjobs from '@/pages/euJobsPage'
 import ROjobs from '@/pages/roJobsPage'
@@ -24,6 +25,7 @@ export default new Router({
 	routes: [
 		{path: '*', name:'404', component: PageNotFound},
 		{ path: '/', name: 'Home', component: Home },
+		{ path: '/despre-noi', name: 'About', component: About },
 		{ path: '/program', name: 'Schedule', component: Schedule },
 		{ path: '/oferte-de-munca-eu', name: 'EUjobs', component: EUjobs },
 		{ path: '/oferte-de-munca-ro', name: 'ROjobs', component: ROjobs },

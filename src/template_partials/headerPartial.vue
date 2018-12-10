@@ -65,9 +65,9 @@
 						
 						<div id="col-target" class="navbar-collapse collapse clearfix">
 							<ul class="navigation clearfix">
-								<li class="dropdown" v-on:click="collapse"><a href="#">Despre Noi</a></li>
+								<li class="dropdown" v-on:click="collapse"><router-link to="/despre-noi">Despre Noi</router-link></li>
 								<li class="dropdown" v-on:click="collapse"><router-link to="/program">Program TV</router-link></li>
-								<li class="dropdown" ><a href="#">Oferte de munca</a>
+								<li class="dropdown" ><a id="drop" href="">Oferte de munca</a>
 									<ul>
                                         <li v-on:click="collapse"><router-link to="/oferte-de-munca-eu">Uniunea Europeana</router-link></li>
                                         <li v-on:click="collapse"><router-link to="/oferte-de-munca-ro">Romania</router-link></li>
@@ -128,19 +128,19 @@
 							</button>
 						</div>
 						
-						<div class="navbar-collapse collapse clearfix">
+						<div id="col-target" class="navbar-collapse collapse clearfix">
 							<ul class="navigation clearfix">
-								<li class="dropdown"><a href="#">Despre Noi</a></li>
-								<li class="dropdown"><router-link to="/program">Program TV</router-link></li>
-								<li class="dropdown"><a href="#">Oferte de munca</a>
+								<li class="dropdown" v-on:click="collapse"><router-link to="/despre-noi">Despre Noi</router-link></li>
+								<li class="dropdown" v-on:click="collapse"><router-link to="/program">Program TV</router-link></li>
+								<li class="dropdown" ><a id="drop" href="">Oferte de munca</a>
 									<ul>
-                                        <li><a href="#">Uniunea Europeana</a></li>
-                                        <li><a href="#">Romania</a></li>
+                                        <li v-on:click="collapse"><router-link to="/oferte-de-munca-eu">Uniunea Europeana</router-link></li>
+                                        <li v-on:click="collapse"><router-link to="/oferte-de-munca-ro">Romania</router-link></li>
                                     </ul>
 								</li>
-								<li class="dropdown"><a href="#">Aplica CV</a></li>
-								<li class="dropdown"><router-link to="/echipa">Echipa</router-link></li>
-								<li class="dropdown"><router-link to="/contact">Contact</router-link></li>
+								<li class="dropdown" v-on:click="collapse"><a href="#">Aplica CV</a></li>
+								<li class="dropdown" v-on:click="collapse"><router-link to="/echipa">Echipa</router-link></li>
+								<li class="dropdown" v-on:click="collapse"><router-link to="/contact">Contact</router-link></li>
 							</ul>
 						</div>
 					</nav><!-- Main Menu End-->
@@ -169,3 +169,9 @@ export default {
 	}
 };
 </script>
+<style>
+#drop{
+	pointer-events: none;
+	cursor: pointer;
+}
+</style>
