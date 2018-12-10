@@ -67,10 +67,10 @@
 							<ul class="navigation clearfix">
 								<li class="dropdown" v-on:click="collapse"><a href="#">Despre Noi</a></li>
 								<li class="dropdown" v-on:click="collapse"><router-link to="/program">Program TV</router-link></li>
-								<li class="dropdown" v-on:click="collapse"><a href="#">Oferte de munca</a>
+								<li class="dropdown" ><a href="#">Oferte de munca</a>
 									<ul>
-                                        <li><a href="#" v-on:click="collapse">Uniunea Europeana</a></li>
-                                        <li><a href="#" v-on:click="collapse">Romania</a></li>
+                                        <li v-on:click="collapse"><router-link to="/oferte-de-munca-eu">Uniunea Europeana</router-link></li>
+                                        <li v-on:click="collapse"><router-link to="/oferte-de-munca-ro">Romania</router-link></li>
                                     </ul>
 								</li>
 								<li class="dropdown" v-on:click="collapse"><a href="#">Aplica CV</a></li>
@@ -164,8 +164,7 @@ export default {
 	},
 	methods: {
 		collapse: (e)=>{
-			document.getElementById('col-target').classList.remove('in');
-			console.log('done')
+			document.getElementById('col-target').classList.remove('in')
 		}
 	}
 };
