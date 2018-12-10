@@ -3,7 +3,10 @@
 		<div class="page-wrapper">
 			<Header></Header>
 			<!-- menu -->
-			<router-view></router-view>
+			<transition name="page" mode="out-in">
+    			<router-view></router-view>
+  			</transition>
+			<!-- <router-view></router-view> -->
 			<Footer></Footer>
 		</div>
 	</div>
@@ -21,3 +24,12 @@ export default {
 	}  
 }
 </script>
+<style>
+.page-enter-active, .page-leave-active {
+  transition: opacity .5s, transform .5s;
+}
+.page-enter, .page-leave-to {
+  opacity: 0;
+  /* transform: translateX(-30%); */
+}
+</style>
