@@ -63,19 +63,19 @@
 							</button>
 						</div>
 						
-						<div class="navbar-collapse collapse clearfix">
+						<div id="col-target" class="navbar-collapse collapse clearfix">
 							<ul class="navigation clearfix">
-								<li class="dropdown"><a href="#">Despre Noi</a></li>
-								<li class="dropdown"><router-link to="/program">Program TV</router-link></li>
-								<li class="dropdown"><a href="#">Oferte de munca</a>
+								<li class="dropdown" v-on:click="collapse"><a href="#">Despre Noi</a></li>
+								<li class="dropdown" v-on:click="collapse"><router-link to="/program">Program TV</router-link></li>
+								<li class="dropdown" v-on:click="collapse"><a href="#">Oferte de munca</a>
 									<ul>
-                                        <li><a href="#">Uniunea Europeana</a></li>
-                                        <li><a href="#">Romania</a></li>
+                                        <li><a href="#" v-on:click="collapse">Uniunea Europeana</a></li>
+                                        <li><a href="#" v-on:click="collapse">Romania</a></li>
                                     </ul>
 								</li>
-								<li class="dropdown"><a href="#">Aplica CV</a></li>
-								<li class="dropdown"><router-link to="/echipa">Echipa</router-link></li>
-								<li class="dropdown"><router-link to="/contact">Contact</router-link></li>
+								<li class="dropdown" v-on:click="collapse"><a href="#">Aplica CV</a></li>
+								<li class="dropdown" v-on:click="collapse"><router-link to="/echipa">Echipa</router-link></li>
+								<li class="dropdown" v-on:click="collapse"><router-link to="/contact">Contact</router-link></li>
 							</ul>
 						</div>
 					</nav>
@@ -160,6 +160,12 @@ export default {
 	data: function(){
 		return {
 			selected: undefined
+		}
+	},
+	methods: {
+		collapse: (e)=>{
+			document.getElementById('col-target').classList.remove('in');
+			console.log('done')
 		}
 	}
 };
