@@ -1,24 +1,65 @@
 <template>
-        <!--Error Section-->
-    <section class="error-section" style="background-image:url(images/background/7.jpg)">
-    	<div class="auto-container">
-        	<div class="content">
-            	<h1>LIVE</h1>
-                <h2>Oops! That page can’t be found</h2>
-                <div class="text">Sorry, but the page you are looking for does not existing</div>
-                <a href="index.html" class="theme-btn btn-style-one">Go to home page</a>
-            </div>
-        </div>
-    </section>
-    <!--End Error Section-->
+	<div class="page">
+		<div class="videoWrapper">
+			<!-- Copy & Pasted from YouTube -->
+			<!-- <iframe width="560" height="349" src="http://www.youtube.com/embed/n_dZNLr2cME?rel=0&hd=1" frameborder="0" allowfullscreen></iframe> -->
+			<video width="320" height="240" controls>
+				<source src="../../vid.mp4" >
+				Your browser does not support the video tag.
+			</video>
+		</div>
+	</div>
 </template>
 <script>
 export default {
 	name: 'WatchStream',
-	mounted: function(){
-		// show as active in menu
-		let activeRouteParent = document.querySelector('.router-link-active').closest('li');
-		activeRouteParent.classList.add('current')	
-	}
+	// mounted: function(){
+	// 	setTimeout(() => {
+	// 		this.collapseHeader()
+	// 	}, 2000);
+	// },
+	// methods: {
+	// 	collapseHeader: ()=>{
+	// 		let header = document.getElementsByTagName("header")[0]
+
+	// 		// collapse the header 
+	// 		header.classList.add('collapseHeader')
+	// 		// on mouse enter event, show full header
+	// 		header.onmouseenter = ()=>{
+	// 			header.classList.toggle('collapseHeader')
+	// 		}
+	// 		// on mouse leave, recollapse header
+	// 		header.onmouseleave = ()=>{header.classList.add('collapseHeader')}
+	// 	},
+	// }
 }
 </script>
+<style>
+.collapseHeader{
+	transition: opacity .1s, transform .1s;
+	transform: translateY(-70%);
+	/* display:inline-block; */
+}
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	/* padding-top: 25px; */
+	height: 0;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.videoWrapper video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+</style>
+
+
