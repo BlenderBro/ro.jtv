@@ -9,6 +9,7 @@ import Schedule from '@/pages/schedulePage'
 import EUjobs from '@/pages/euJobsPage'
 import ROjobs from '@/pages/roJobsPage'
 import WatchStream from '@/pages/watchStreamPage'
+import CV from '@/pages/cvPage'
 import Team from '@/pages/teamPage'
 import Contact from '@/pages/contactPage'
 
@@ -30,6 +31,7 @@ export default new Router({
 		{ path: '/oferte-de-munca-eu', name: 'EUjobs', component: EUjobs },
 		{ path: '/oferte-de-munca-ro', name: 'ROjobs', component: ROjobs },
 		{ path: '/echipa', name: 'Team', component: Team },
+		{ path: '/adauga-cv', name: 'CV', component: CV },
 		{ path: '/contact', name: 'Contact', component: Contact },
 		{ path: '/live', name: 'WatchStream', component: WatchStream }
 	]

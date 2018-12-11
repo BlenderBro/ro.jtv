@@ -73,7 +73,7 @@
                                         <li v-on:click="collapse"><router-link to="/oferte-de-munca-ro">Romania</router-link></li>
                                     </ul>
 								</li>
-								<li class="dropdown" v-on:click="collapse"><a href="#">Aplica CV</a></li>
+								<li class="dropdown" v-on:click="collapse"><router-link to="/adauga-cv">Aplica CV</router-link></li>
 								<li class="dropdown" v-on:click="collapse"><router-link to="/echipa">Echipa</router-link></li>
 								<li class="dropdown" v-on:click="collapse"><router-link to="/contact">Contact</router-link></li>
 							</ul>
@@ -138,7 +138,7 @@
                                         <li v-on:click="collapse"><router-link to="/oferte-de-munca-ro">Romania</router-link></li>
                                     </ul>
 								</li>
-								<li class="dropdown" v-on:click="collapse"><a href="#">Aplica CV</a></li>
+								<li class="dropdown" v-on:click="collapse"><router-link to="/adauga-cv">Aplica CV</router-link></li>
 								<li class="dropdown" v-on:click="collapse"><router-link to="/echipa">Echipa</router-link></li>
 								<li class="dropdown" v-on:click="collapse"><router-link to="/contact">Contact</router-link></li>
 							</ul>
