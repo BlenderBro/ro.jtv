@@ -38,7 +38,7 @@
                 Facem totul pentru că tu contezi!<br>
                 Dăm de muncă la ROMÂNI !
               </div>
-              <a href="#" class="theme-btn btn-style-one">Read More</a>
+              <!-- <a href="#" class="theme-btn btn-style-one">Read More</a> -->
             </div>
           </div>
 

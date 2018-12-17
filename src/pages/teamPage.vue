@@ -35,10 +35,10 @@
 								<li><a href="#"><span class="fa fa-pinterest-p"></span></a></li>
 							</ul>
 							<div class="image">
-								<img src="static/images/resource/team-1.png" alt="" />
+								<img src="../assets/team/Sorin Voinea.svg" alt="" />
 							</div>
 							<div class="lower-box">
-								<h3><a href="#">Celsiya Malcom</a></h3>
+								<h3><a href="#">Sorin Voinea</a></h3>
 								<div class="designation">Builder Advisor</div>
 							</div>
 						</div>
@@ -54,90 +54,15 @@
 								<li><a href="#"><span class="fa fa-pinterest-p"></span></a></li>
 							</ul>
 							<div class="image">
-								<img src="static/images/resource/team-2.png" alt="" />
+								<img src="../assets/team/Sorin Petre.svg" alt="" />
 							</div>
 							<div class="lower-box">
-								<h3><a href="#">Andrea Spilber</a></h3>
+								<h3><a href="#">Sorin Petre</a></h3>
 								<div class="designation">Project Manager</div>
 							</div>
 						</div>
-					</div>
-					
-					<!--Team Block-->
-					<div class="team-block col-md-4 col-sm-6 col-xs-12">
-						<div class="inner-box">
-							<ul class="social-icon-one">
-								<li><a href="#"><span class="fa fa-facebook"></span></a></li>
-								<li><a href="#"><span class="fa fa-twitter"></span></a></li>
-								<li><a href="#"><span class="fa fa-dribbble"></span></a></li>
-								<li><a href="#"><span class="fa fa-pinterest-p"></span></a></li>
-							</ul>
-							<div class="image">
-								<img src="static/images/resource/team-3.png" alt="" />
-							</div>
-							<div class="lower-box">
-								<h3><a href="#">Nelson Mecoy</a></h3>
-								<div class="designation">Architecture</div>
-							</div>
-						</div>
-					</div>
-					
-					<!--Team Block-->
-					<div class="team-block col-md-4 col-sm-6 col-xs-12">
-						<div class="inner-box">
-							<ul class="social-icon-one">
-								<li><a href="#"><span class="fa fa-facebook"></span></a></li>
-								<li><a href="#"><span class="fa fa-twitter"></span></a></li>
-								<li><a href="#"><span class="fa fa-dribbble"></span></a></li>
-								<li><a href="#"><span class="fa fa-pinterest-p"></span></a></li>
-							</ul>
-							<div class="image">
-								<img src="static/images/resource/team-4.png" alt="" />
-							</div>
-							<div class="lower-box">
-								<h3><a href="#">Aimee Devlin</a></h3>
-								<div class="designation">Builder Advisor</div>
-							</div>
-						</div>
-					</div>
-					
-					<!--Team Block-->
-					<div class="team-block col-md-4 col-sm-6 col-xs-12">
-						<div class="inner-box">
-							<ul class="social-icon-one">
-								<li><a href="#"><span class="fa fa-facebook"></span></a></li>
-								<li><a href="#"><span class="fa fa-twitter"></span></a></li>
-								<li><a href="#"><span class="fa fa-dribbble"></span></a></li>
-								<li><a href="#"><span class="fa fa-pinterest-p"></span></a></li>
-							</ul>
-							<div class="image">
-								<img src="static/images/resource/team-5.png" alt="" />
-							</div>
-							<div class="lower-box">
-								<h3><a href="#">ADAM Smith</a></h3>
-								<div class="designation">Project Manager</div>
-							</div>
-						</div>
-					</div>
-					
-					<!--Team Block-->
-					<div class="team-block col-md-4 col-sm-6 col-xs-12">
-						<div class="inner-box">
-							<ul class="social-icon-one">
-								<li><a href="#"><span class="fa fa-facebook"></span></a></li>
-								<li><a href="#"><span class="fa fa-twitter"></span></a></li>
-								<li><a href="#"><span class="fa fa-dribbble"></span></a></li>
-								<li><a href="#"><span class="fa fa-pinterest-p"></span></a></li>
-							</ul>
-							<div class="image">
-								<img src="static/images/resource/team-6.png" alt="" />
-							</div>
-							<div class="lower-box">
-								<h3><a href="#">Jeniffer Burns</a></h3>
-								<div class="designation">Architecture</div>
-							</div>
-						</div>
-					</div>
+					</div>		
+				
 					
 				</div>
 				

@@ -50,6 +50,10 @@
 							<div class="form-group col-md-6 col-sm-6 col-xs-12">
 								<input id="country" type="email" name="mail" value="" placeholder="In ce tara cauti de munca?" required>
 							</div>
+							<div class="form-group col-md-6 col-sm-6 col-xs-12">
+								<p>Adaugati Poza</p>
+								<input id="country" type="file" name="mail" value="" required>
+							</div>
 							
 							<div class="form-group col-md-12 col-sm-12 col-xs-12">
 								<textarea name="message" placeholder="Experienta Profesionala"></textarea>
@@ -74,6 +78,15 @@ export default {
 }
 </script>
 <style>
+
+.inputfile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
 
 </style>
 

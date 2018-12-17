@@ -94,14 +94,13 @@
 			<div class="auto-container">
 				<div class="row clearfix">
 					<div class="column col-md-6 col-sm-12 col-xs-12">
-						<div class="copyright">©jTV {{year}}. Toate drepturile blabla</div>
+						<div class="copyright">©JobTV {{year}}. Toate drepturile rezervate</div>
 					</div>
 					<div class="column col-md-6 col-sm-12 col-xs-12">
 						<ul class="footer-nav">
-							<li><a href="#">Item 1</a></li>
-							<li><a href="#">Item 2</a></li>
-							<li><a href="#">Item 3</a></li>
-							<li><a href="#">Item 4</a></li>
+							<li><a href="#">Termeni si Conditii</a></li>
+							<li><a href="#">ANPC</a></li>
+							<li><a href="#">Cookies</a></li>
 							<li><a href="#">Contact</a></li>
 						</ul>
 					</div>
@@ -126,4 +125,13 @@ export default {
 	}
 }
 </script>
+<style>
+footer .footer-bottom .copyright{
+	font-size: 12px;
+}
+footer .footer-bottom .footer-nav li a{
+	font-size: 12px;
+}
+</style>
+
 

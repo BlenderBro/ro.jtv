@@ -25,7 +25,7 @@
 				<div class="mixitup-gallery">
 					
 					<!--Filter-->
-					<div class="filters text-center clearfix">
+					<!-- <div class="filters text-center clearfix">
 						<ul class="filter-tabs filter-btns clearfix">
 							<li class="active filter" data-role="button" v-on:click="filter('all')">All</li>
 							<li class="filter" data-role="button" v-on:click="filter('renovation')">Renovation</li>
@@ -33,7 +33,7 @@
 							<li class="filter" data-role="button" v-on:click="filter('construction')">Construction</li>
 							<li class="filter" data-role="button" v-on:click="filter('architecture')">Architecutre</li>
 						</ul>
-					</div>
+					</div> -->
 					
 					<div class="filter-list row clearfix">
 						
@@ -190,9 +190,9 @@
 					</div>
 					
 					<!--Btn Box-->
-					<div class="btn-box text-center">
+					<!-- <div class="btn-box text-center">
 						<a href="projects-single.html" class="theme-btn btn-style-three">More Project</a>
-					</div>
+					</div> -->
 					
 				</div>
 			</div>
