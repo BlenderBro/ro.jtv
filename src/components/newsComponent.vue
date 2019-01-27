@@ -13,11 +13,11 @@
                 <div class="news-block col-md-4 col-sm-6 col-xs-12">
                 	<div class="inner-box">
                     	<div class="image">
-                        	<a href="blog-detail.html"><img src="static/images/resource/news-1.jpg" alt="" /></a>
+                        	<router-link to="/articol"><img src="static/images/resource/news-1.jpg" alt="" /></router-link>
                             <div class="post-date"><span>18</span> June</div>
                         </div>
                         <div class="lower-content">
-                        	<h3><a href="blog-detail.html">High quality work for our customer.</a></h3>
+                        	<h3><router-link to="/articol">High quality work for our customer.</router-link></h3>
                             <ul class="post-meta">
                             	<li>24 Liks</li>
                                 <li>3 Comments</li>

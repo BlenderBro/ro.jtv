@@ -11,7 +11,11 @@ import ROjobs from '@/pages/roJobsPage'
 import WatchStream from '@/pages/watchStreamPage'
 import CV from '@/pages/cvPage'
 import Team from '@/pages/teamPage'
+import Blog from '@/pages/blogPage'
 import Contact from '@/pages/contactPage'
+
+// single for testing only
+import Single from '@/pages/singleBlogPage'
 
 
 
@@ -33,6 +37,8 @@ export default new Router({
 		{ path: '/echipa', name: 'Team', component: Team },
 		{ path: '/adauga-cv', name: 'CV', component: CV },
 		{ path: '/contact', name: 'Contact', component: Contact },
+		{ path: '/stiri', name: 'News', component: Blog },
+		{ path: '/articol', name: 'Single', component: Single },
 		{ path: '/live', name: 'WatchStream', component: WatchStream }
 	]
 })

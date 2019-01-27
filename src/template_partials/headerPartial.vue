@@ -14,7 +14,7 @@
 					<div class="pull-right upper-right clearfix">
 						
 						<!--Info Box-->
-						<div class="upper-column info-box">
+						<div class="upper-column info-box onAir">
 							<div class="icon-box"><span class="flaticon-clock"></span></div>
 							<ul>
 								<li><strong>ON AIR</strong></li>
@@ -23,7 +23,7 @@
 						</div>
 						
 						<!--Info Box-->
-						<div class="upper-column info-box">
+						<div class="upper-column info-box contact">
 							<div class="icon-box"><span class="flaticon-phone-call"></span></div>
 							<ul>
 								<li><strong>+40 741 330 100</strong></li>
@@ -32,7 +32,7 @@
 						</div>
 						
 						<!--Info Box-->
-						<div class="upper-column info-box">
+						<div class="upper-column info-box addr">
 							<div class="icon-box"><span class="flaticon-placeholder-1"></span></div>
 							<ul>
 								<li><strong>BUCURESTI</strong></li>
@@ -68,13 +68,14 @@
 								<li class="dropdown" v-on:click="collapse"><router-link to="/despre-noi">Despre Noi</router-link></li>
 								<li class="dropdown" v-on:click="collapse"><router-link to="/program">Program TV</router-link></li>
 								<li class="dropdown" ><a id="drop" href="">Oferte de munca</a>
-									<ul>
+									<ul id="hidden">
                                         <li v-on:click="collapse"><router-link to="/oferte-de-munca-eu">Uniunea Europeana</router-link></li>
                                         <li v-on:click="collapse"><router-link to="/oferte-de-munca-ro">Romania</router-link></li>
                                     </ul>
 								</li>
 								<li class="dropdown" v-on:click="collapse"><router-link to="/adauga-cv">Aplica CV</router-link></li>
 								<li class="dropdown" v-on:click="collapse"><router-link to="/echipa">Echipa</router-link></li>
+								<li class="dropdown" v-on:click="collapse"><router-link to="/stiri">Stiri</router-link></li>
 								<li class="dropdown" v-on:click="collapse"><router-link to="/contact">Contact</router-link></li>
 							</ul>
 						</div>
@@ -140,6 +141,7 @@
 								</li>
 								<li class="dropdown" v-on:click="collapse"><router-link to="/adauga-cv">Aplica CV</router-link></li>
 								<li class="dropdown" v-on:click="collapse"><router-link to="/echipa">Echipa</router-link></li>
+								<li class="dropdown" v-on:click="collapse"><router-link to="/stiri">Stiri</router-link></li>
 								<li class="dropdown" v-on:click="collapse"><router-link to="/contact">Contact</router-link></li>
 							</ul>
 						</div>
@@ -155,6 +157,7 @@
 </template>
 
 <script>
+
 export default {
 	name: 'Header',
 	data: function(){
@@ -173,5 +176,17 @@ export default {
 #drop{
 	pointer-events: none;
 	cursor: pointer;
+}
+@media only screen and (max-width: 1023px){
+	.main-header.header-style-five .header-upper .upper-right {
+		display: block !important;
+	}
+	.main-header.header-style-five .header-upper .upper-right > .addr {
+		display: none !important;
+	}
+	.main-header.header-style-five .header-upper .upper-right > .contact {
+		display: none !important;
+	}
+
 }
 </style>

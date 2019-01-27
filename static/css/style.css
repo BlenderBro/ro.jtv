@@ -156,7 +156,7 @@ img{
 	/* text-align: center; */
 }
 .ads{
-	/* margin-bottom: 2em; */
+	margin-bottom: 2em;
 	padding: 0 2em 0 2em;
 }
 
@@ -6728,7 +6728,7 @@ footer .footer-bottom .footer-nav li a:hover{
 
 .blog-single .inner-box .title-box .post-info li:after{
 	position:absolute;
-	content:'/';
+	content:'';
 	right:-5px;
 	top:0px;
 }
