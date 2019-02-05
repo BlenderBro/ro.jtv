@@ -21,6 +21,8 @@ import Single from '@/pages/singleBlogPage'
 
 Vue.use(Router)
 
+// const adminPath = window.location.replace("http://stackoverflow.com");
+
 export default new Router({
 	mode: 'history',
 	base: __dirname,
@@ -40,5 +42,6 @@ export default new Router({
 		{ path: '/stiri', name: 'News', component: Blog },
 		{ path: '/articol', name: 'Single', component: Single },
 		{ path: '/live', name: 'WatchStream', component: WatchStream }
+		// { path: '/admin', name: 'WatchStream', redirect: adminPath}
 	]
 })

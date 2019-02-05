@@ -35,7 +35,7 @@
 								<li><a href="#"><span class="fa fa-pinterest-p"></span></a></li>
 							</ul>
 							<div class="image">
-								<img src="../assets/team/Sorin Voinea.svg" alt="" />
+								<img src="../assets/team/Sorin Voinea.png" alt="" />
 							</div>
 							<div class="lower-box">
 								<h3><a href="#">Sorin Voinea</a></h3>
@@ -54,7 +54,7 @@
 								<li><a href="#"><span class="fa fa-pinterest-p"></span></a></li>
 							</ul>
 							<div class="image">
-								<img src="../assets/team/Sorin Petre.svg" alt="" />
+								<img src="../assets/team/Sorin Petre.png" alt="" />
 							</div>
 							<div class="lower-box">
 								<h3><a href="#">Sorin Petre</a></h3>
