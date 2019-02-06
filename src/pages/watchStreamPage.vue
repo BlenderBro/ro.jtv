@@ -1,16 +1,23 @@
 <template>
 	<div class="page">
 		<div class="videoWrapper">
-			<!-- Copy & Pasted from YouTube -->
-			<!-- <iframe width="560" height="349" src="http://www.youtube.com/embed/n_dZNLr2cME?rel=0&hd=1" frameborder="0" allowfullscreen></iframe> -->
-			<video width="320" height="240" controls>
+			<!-- <video width="320" height="240" controls>
 				<source src="../../vid.mp4" >
 				Your browser does not support the video tag.
-			</video>
+			</video> -->
+			<video id="vid1" controls preload="none "width="640"height="264"
+					class="video-js vjs-fluid vjs-default-skin vjs-big-play-centered"
+					data-setup='{}'>
+				<source src="http://68.183.75.48:8082/hls/test.m3u8" type="application/x-mpegURL"/>
+      		</video>
 		</div>
 	</div>
 </template>
 <script>
+
+// import 'videojs-youtube/dist/Youtube.min.js';
+import 'video.js/dist/video-js.min.css';
+import 'video.js/dist/video.min.js';
 export default {
 	name: 'WatchStream',
 	// mounted: function(){
