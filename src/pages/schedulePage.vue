@@ -15,27 +15,51 @@
 		<!--Faq Section-->
 		<section class="faq-page-section">
 			<div class="auto-container">
-				<div class="row clearfix">
 					<div class="sec-title">
 						<h2>De luni pana vineri:</h2>
 					</div>
+				<div  v-for="guide of guides" class="row clearfix">
 					<div class="col-md-4 col-xs-4 title">
-						<span class="hours">06:00 - 08:00</span> 
-						<p>NEAȚA COOLINARĂ</p>
+						<span class="hours">{{guide.time_slot}}</span> 
+						<p>{{guide.title}}</p>
 					</div>
 					<div class="col-md-8 col-xs-8 desc">
-						<p>Emisiune care prezintă pregătirea unui meniu, interviuri si recomandări ale unor chefi bucătari depre cantitatea de proteine și vitamine din alimentație, în functie de munca pe care o desfașurăm. 
-Anunțuri de angajare în domeniul Horecca</p>
-					</div>			
+						<p v-html="guide.description"></p>
+					</div>						
 				</div>
+				
 			</div>
 		</section>
 		<!--End Faq Section-->   
 	</div>
 </template>
 <script>
+import axios from 'axios'
 export default {
 	name:'SchedulePage',
+
+	data: function () {
+        return {
+            guides:  [],
+            errors: [],
+            // path: 'http://localhost:80/storage/'
+        }
+    },
+    created(){
+        this.getGuides()
+    },
+    methods: {
+        getGuides: function(){
+            
+            axios.get('http://localhost:80/api/v1/guides')
+                .then(response => {
+                    this.guides = response.data                    
+                    })
+                .catch(e => console.log(e))
+
+            console.log()
+        }
+    }
 }
 </script>
 <style scoped>

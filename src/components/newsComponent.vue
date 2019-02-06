@@ -10,60 +10,22 @@
             <div class="row clearfix">
             	
                 <!--News Block-->
-                <div class="news-block col-md-4 col-sm-6 col-xs-12">
-                	<div class="inner-box">
-                    	<div class="image">
-                        	<router-link to="/articol"><img src="static/images/resource/news-1.jpg" alt="" /></router-link>
-                            <div class="post-date"><span>18</span> June</div>
+                <div v-for="post of posts">
+                    <div class="news-block col-md-4 col-sm-6 col-xs-12">
+                        <div class="inner-box">
+                            <div class="image">
+                                <router-link to="/articol"><img v-bind:src="path+post.image" alt="" /></router-link>
+                                <!-- <div class="post-date"><span>{{}}</span>{{}}</div> -->
+                            </div>
+                            <div class="lower-content">
+                                <h3><router-link v-bind:to="'/articol/'+post.slug">{{post.title}}</router-link></h3>
+                                <ul class="post-meta">                            	
+                                    <!-- <li>Autor:  </li> -->
+                                </ul>
+                                <div class="text">{{post.excerpt}}</div>
+                            </div>
                         </div>
-                        <div class="lower-content">
-                        	<h3><router-link to="/articol">High quality work for our customer.</router-link></h3>
-                            <ul class="post-meta">
-                            	<li>24 Liks</li>
-                                <li>3 Comments</li>
-                                <li>By Admin Rose </li>
-                            </ul>
-                            <div class="text">Nullam ut mauris vitae tortor sodales efficitur. Quisque ac orci ante. Proin amet turpis l......</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!--News Block-->
-                <div class="news-block col-md-4 col-sm-6 col-xs-12">
-                	<div class="inner-box">
-                    	<div class="image">
-                        	<a href="blog-detail.html"><img src="static/images/resource/news-2.jpg" alt="" /></a>
-                            <div class="post-date"><span>18</span> June</div>
-                        </div>
-                        <div class="lower-content">
-                        	<h3><a href="blog-detail.html">Satisfection for the customer our first parity.</a></h3>
-                            <ul class="post-meta">
-                            	<li>24 Liks</li>
-                                <li>3 Comments</li>
-                                <li>By Admin Rose </li>
-                            </ul>
-                            <div class="text">Nullam ut mauris vitae tortor sodales efficitur. Quisque ac orci ante. Proin amet turpis l......</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!--News Block-->
-                <div class="news-block col-md-4 col-sm-6 col-xs-12">
-                	<div class="inner-box">
-                    	<div class="image">
-                        	<a href="blog-detail.html"><img src="static/images/resource/news-3.jpg" alt="" /></a>
-                            <div class="post-date"><span>18</span> June</div>
-                        </div>
-                        <div class="lower-content">
-                        	<h3><a href="blog-detail.html">Professional approch is always quality work.</a></h3>
-                            <ul class="post-meta">
-                            	<li>24 Liks</li>
-                                <li>3 Comments</li>
-                                <li>By Admin Rose </li>
-                            </ul>
-                            <div class="text">Nullam ut mauris vitae tortor sodales efficitur. Quisque ac orci ante. Proin amet turpis l......</div>
-                        </div>
-                    </div>
+                    </div>               
                 </div>
                 
             </div>
@@ -72,7 +34,33 @@
     <!--End News Section-->
 </template>
 <script>
+import axios from 'axios';
+
 export default {
-    name: 'BreakingNewsComp'
+    name: 'BreakingNewsComp',
+    data: function () {
+        return {
+            posts:  [],
+            
+            errors: [],
+            path: 'http://localhost:80/storage/'
+        }
+    },
+    created(){
+        this.getPosts()
+    },
+    methods: {
+        getPosts: function(){
+            
+            axios.get('http://localhost:80/api/v1/breaking')
+                .then(response => {
+                    this.posts = response.data.data
+                    console.log(response.data.data)
+                    })
+                .catch(e => console.log(e))
+
+            console.log()
+        }
+    }
 }
 </script>

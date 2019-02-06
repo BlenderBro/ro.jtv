@@ -17,76 +17,25 @@
     	<div class="auto-container">
         	<div class="row clearfix">
             	
-                <!--News Block-->
-                <div class="news-block col-md-4 col-sm-6 col-xs-12">
-                	<div class="inner-box">
-                    	<div class="image">
-                        	<a href="blog-detail.html"><img src="static/images/resource/news-12.jpg" alt="" /></a>
-                            <div class="post-date"><span>18</span> June</div>
+               <!--News Block-->
+                
+                    <div v-for="post of posts" class="news-block col-md-4 col-sm-6 col-xs-12">
+                        <div class="inner-box">
+                            <div class="image">
+                                <router-link to="/articol"><img v-bind:src="path+post.image" alt="" /></router-link>
+                                <!-- <div class="post-date"><span>{{}}</span>{{}}</div> -->
+                            </div>
+                            <div class="lower-content">
+                                <h3><router-link to="/articol">{{post.title}}</router-link></h3>
+                                <ul class="post-meta">                            	
+                                    <!-- <li>Autor:  </li> -->
+                                </ul>
+                                <div class="text">{{post.excerpt}}</div>
+                            </div>
                         </div>
-                        <div class="lower-content">
-                        	<h3><a href="blog-detail.html">High quality work for our customer.</a></h3>
-                            <ul class="post-meta">
-                                <li>Nume Autor</li>
-                            </ul>
-                            <div class="text">Nullam ut mauris vitae tortor sodales efficitur. Quisque ac orci ante. Proin amet turpis l......</div>
-                        </div>
-                    </div>
-                </div>
-
-				 <!--News Block-->
-                <div class="news-block col-md-4 col-sm-6 col-xs-12">
-                	<div class="inner-box">
-                    	<div class="image">
-                        	<a href="blog-detail.html"><img src="static/images/resource/news-12.jpg" alt="" /></a>
-                            <div class="post-date"><span>18</span> June</div>
-                        </div>
-                        <div class="lower-content">
-                        	<h3><a href="blog-detail.html">High quality work for our customer.</a></h3>
-                            <ul class="post-meta">
-                                <li>Nume Autor</li>
-                            </ul>
-                            <div class="text">Nullam ut mauris vitae tortor sodales efficitur. Quisque ac orci ante. Proin amet turpis l......</div>
-                        </div>
-                    </div>
-                </div>
-
-				 <!--News Block-->
-                <div class="news-block col-md-4 col-sm-6 col-xs-12">
-                	<div class="inner-box">
-                    	<div class="image">
-                        	<a href="blog-detail.html"><img src="static/images/resource/news-12.jpg" alt="" /></a>
-                            <div class="post-date"><span>18</span> June</div>
-                        </div>
-                        <div class="lower-content">
-                        	<h3><a href="blog-detail.html">High quality work for our customer.</a></h3>
-                            <ul class="post-meta">
-                                <li>Nume Autor</li>
-                            </ul>
-                            <div class="text">Nullam ut mauris vitae tortor sodales efficitur. Quisque ac orci ante. Proin amet turpis l......</div>
-                        </div>
-                    </div>
-                </div>
-
-				 <!--News Block-->
-                <div class="news-block col-md-4 col-sm-6 col-xs-12">
-                	<div class="inner-box">
-                    	<div class="image">
-                        	<a href="blog-detail.html"><img src="static/images/resource/news-12.jpg" alt="" /></a>
-                            <div class="post-date"><span>18</span> June</div>
-                        </div>
-                        <div class="lower-content">
-                        	<h3><a href="blog-detail.html">High quality work for our customer.</a></h3>
-                            <ul class="post-meta">
-                                <li>Nume Autor</li>
-                            </ul>
-                            <div class="text">Nullam ut mauris vitae tortor sodales efficitur. Quisque ac orci ante. Proin amet turpis l......</div>
-                        </div>
-                    </div>
+                    </div>               
                 </div>
                 
-                
-            </div>
 			
             <!--Pagination-->
             <!-- <div class="pagination-outer text-center">
@@ -107,8 +56,33 @@
   </div>
 </template>
 <script>
+import axios from 'axios'
 export default {
-  name: "Blog"
+  name: "Blog",
+
+  data: function () {
+        return {
+            posts:  [],
+            errors: [],
+            path: 'http://localhost:80/storage/'
+        }
+    },
+    created(){
+        this.getPosts()
+    },
+    methods: {
+        getPosts: function(){
+            
+            axios.get('http://localhost:80/api/v1/articole')
+                .then(response => {
+                    this.posts = response.data.data
+                    console.log(response.data.data)
+                    })
+                .catch(e => console.log(e))
+
+            console.log()
+        }
+    }
 };
 </script>
 
