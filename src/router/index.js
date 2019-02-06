@@ -40,7 +40,7 @@ export default new Router({
 		{ path: '/adauga-cv', name: 'CV', component: CV },
 		{ path: '/contact', name: 'Contact', component: Contact },
 		{ path: '/stiri', name: 'News', component: Blog },
-		{ path: '/articol', name: 'Single', component: Single },
+		{ path: '/articol/:slug', name: 'Single', component: Single },
 		{ path: '/live', name: 'WatchStream', component: WatchStream }
 		// { path: '/admin', name: 'WatchStream', redirect: adminPath}
 	]
