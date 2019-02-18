@@ -67,11 +67,11 @@
 							<ul class="navigation clearfix">
 								<li class="dropdown" v-on:click="collapse"><router-link to="/despre-noi">Despre Noi</router-link></li>
 								<li class="dropdown" v-on:click="collapse"><router-link to="/program">Program TV</router-link></li>
-								<li class="dropdown" ><a id="drop" href="">Oferte de munca</a>
-									<ul id="hidden">
+								<li class="dropdown" v-on:click="collapse"><router-link to="/oferte-de-munca">Oferte de munca</router-link>
+									<!-- <ul id="hidden">
                                         <li v-on:click="collapse"><router-link to="/oferte-de-munca-eu">Uniunea Europeana</router-link></li>
                                         <li v-on:click="collapse"><router-link to="/oferte-de-munca-ro">Romania</router-link></li>
-                                    </ul>
+                                    </ul> -->
 								</li>
 								<li class="dropdown" v-on:click="collapse"><router-link to="/adauga-cv">Aplica CV</router-link></li>
 								<li class="dropdown" v-on:click="collapse"><router-link to="/echipa">Echipa</router-link></li>
@@ -79,30 +79,7 @@
 								<li class="dropdown" v-on:click="collapse"><router-link to="/contact">Contact</router-link></li>
 							</ul>
 						</div>
-					</nav>
-					<!-- Main Menu End-->
-					<div class="outer-box clearfix">
-						
-						<ul class="options">
-							<li class="dropdown search-box-outer">
-								<button class="search-box-btn dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="fa fa-search"></span></button>
-								<ul class="dropdown-menu pull-right search-panel" aria-labelledby="dropdownMenu3">
-									<li class="panel-outer">
-										<div class="form-container">
-											<form method="post" action="blog.html">
-												<div class="form-group">
-													<input type="search" name="field-name" value="" placeholder="Search Here" required>
-													<button type="submit" class="search-btn"><span class="fa fa-search"></span></button>
-												</div>
-											</form>
-										</div>
-									</li>
-								</ul>
-							</li>
-							<li><a href="#"><span class="fa fa-cart-plus"></span></a></li>
-						</ul>
-						
-					</div>
+					</nav>					
 				</div>
 			</div>
 		</div>
@@ -133,11 +110,11 @@
 							<ul class="navigation clearfix">
 								<li class="dropdown" v-on:click="collapse"><router-link to="/despre-noi">Despre Noi</router-link></li>
 								<li class="dropdown" v-on:click="collapse"><router-link to="/program">Program TV</router-link></li>
-								<li class="dropdown" ><a id="drop" href="">Oferte de munca</a>
-									<ul>
+								<li class="dropdown" v-on:click="collapse"><router-link to="/oferte-de-munca">Oferte de munca</router-link>
+									<!-- <ul>
                                         <li v-on:click="collapse"><router-link to="/oferte-de-munca-eu">Uniunea Europeana</router-link></li>
                                         <li v-on:click="collapse"><router-link to="/oferte-de-munca-ro">Romania</router-link></li>
-                                    </ul>
+                                    </ul> -->
 								</li>
 								<li class="dropdown" v-on:click="collapse"><router-link to="/adauga-cv">Aplica CV</router-link></li>
 								<li class="dropdown" v-on:click="collapse"><router-link to="/echipa">Echipa</router-link></li>

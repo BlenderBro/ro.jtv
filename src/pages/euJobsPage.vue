@@ -44,148 +44,25 @@
 									<img src="static/images/gallery/5.jpg" alt="" />
 									<div class="overlay-box">
 										<div class="content">
-											<h3>Triangle Concrete House On Lake</h3>
-											<div class="see-project">See Project <span class="fa fa-angle-right"></span></div>
+											<h3>Job</h3>
+											<div class="see-project">Detalii <span class="fa fa-angle-right"></span></div>
 										</div>
 									</div>
 									<!--Overlay Two-->
 									<div class="overlay-two">
 										<div class="overlay-two-inner">
 											<div class="overlay-two-content">
-												<h2><a href="projects-single.html">Triangle Concrete House On Lake</a></h2>
-												<div class="text">Sometimes you want to go where everybody knows your name. And they're always glad you came. Straight nin' the curves flatnin' the hills Someday the mountain will.</div>
-												<a href="projects-single.html" class="see-more">See Project <span class="fa fa-angle-right"></span></a>
+												<h2><a href="#">Job</a></h2>
+												<div class="text">
+													Descriere scurta job
+												</div>
+												<a href="#" class="see-more">See Project <span class="fa fa-angle-right"></span></a>
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
-						</div>
-						
-						<!--Project Block-->
-						<div id="visible" class="project-block mix all renovation isolation col-md-6 col-sm-12 col-xs-12">
-							<div class="inner-box">
-								<div class="image">
-									<img src="static/images/gallery/6.jpg" alt="" />
-									<div class="overlay-box">
-										<div class="content">
-											<h3>Triangle Concrete House On Lake</h3>
-											<div class="see-project">See Project <span class="fa fa-angle-right"></span></div>
-										</div>
-									</div>
-									<!--Overlay Two-->
-									<div class="overlay-two">
-										<div class="overlay-two-inner">
-											<div class="overlay-two-content">
-												<h2><a href="projects-single.html">Triangle Concrete House On Lake</a></h2>
-												<div class="text">Sometimes you want to go where everybody knows your name. And they're always glad you came. Straight nin' the curves flatnin' the hills Someday the mountain will.</div>
-												<a href="projects-single.html" class="see-more">See Project <span class="fa fa-angle-right"></span></a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						
-						<!--Project Block-->
-						<div id="visible" class="project-block mix all architecutre isolation renovation col-md-3 col-sm-6 col-xs-12">
-							<div class="inner-box">
-								<div class="image">
-									<img src="static/images/gallery/7.jpg" alt="" />
-									<div class="overlay-box">
-										<div class="content">
-											<h3>Milko Co-Working Building</h3>
-											<div class="see-project">See Project <span class="fa fa-angle-right"></span></div>
-										</div>
-									</div>
-									<!--Overlay Two-->
-									<div class="overlay-two">
-										<div class="overlay-two-inner">
-											<div class="overlay-two-content">
-												<h2><a href="projects-single.html">Milko Co-Working Building</a></h2>
-												<div class="text">Sometimes you want to go where everybody knows your name. And they're always glad you came. Straight nin' the curves flatnin' the hills Someday the mountain will.</div>
-												<a href="projects-single.html" class="see-more">See Project <span class="fa fa-angle-right"></span></a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						
-						<!--Project Block-->
-						<div id="visible" class="project-block mix all renovation col-md-3 col-sm-6 col-xs-12">
-							<div class="inner-box">
-								<div class="image">
-									<img src="static/images/gallery/5.jpg" alt="" />
-									<div class="overlay-box">
-										<div class="content">
-											<h3>Triangle Concrete House On Lake</h3>
-											<div class="see-project">See Project <span class="fa fa-angle-right"></span></div>
-										</div>
-									</div>
-									<!--Overlay Two-->
-									<div class="overlay-two">
-										<div class="overlay-two-inner">
-											<div class="overlay-two-content">
-												<h2><a href="projects-single.html">Triangle Concrete House On Lake</a></h2>
-												<div class="text">Sometimes you want to go where everybody knows your name. And they're always glad you came. Straight nin' the curves flatnin' the hills Someday the mountain will.</div>
-												<a href="projects-single.html" class="see-more">See Project <span class="fa fa-angle-right"></span></a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						
-						<!--Project Block-->
-						<div id="visible" class="project-block mix all construction architecutre col-md-3 col-sm-12 col-xs-12">
-							<div class="inner-box">
-								<div class="image">
-									<img src="static/images/gallery/7.jpg" alt="" />
-									<div class="overlay-box">
-										<div class="content">
-											<h3>Small House Near Wroclaw</h3>
-											<div class="see-project">See Project <span class="fa fa-angle-right"></span></div>
-										</div>
-									</div>
-									<!--Overlay Two-->
-									<div class="overlay-two">
-										<div class="overlay-two-inner">
-											<div class="overlay-two-content">
-												<h2><a href="projects-single.html">Small House Near Wroclaw</a></h2>
-												<div class="text">Sometimes you want to go where everybody knows your name. And they're always glad you came. Straight nin' the curves flatnin' the hills Someday the mountain will.</div>
-												<a href="projects-single.html" class="see-more">See Project <span class="fa fa-angle-right"></span></a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						
-						<!--Project Block-->
-						<div id="visible" class="project-block mix all renovation isolation col-md-6 col-sm-12 col-xs-12">
-							<div class="inner-box">
-								<div class="image">
-									<img src="static/images/gallery/6.jpg" alt="" />
-									<div class="overlay-box">
-										<div class="content">
-											<h3>Ocean Museum <br> on Italy</h3>
-											<div class="see-project">See Project <span class="fa fa-angle-right"></span></div>
-										</div>
-									</div>
-									<!--Overlay Two-->
-									<div class="overlay-two">
-										<div class="overlay-two-inner">
-											<div class="overlay-two-content">
-												<h2><a href="projects-single.html">Ocean Museum <br> on Italy</a></h2>
-												<div class="text">Sometimes you want to go where everybody knows your name. And they're always glad you came. Straight nin' the curves flatnin' the hills Someday the mountain will.</div>
-												<a href="projects-single.html" class="see-more">See Project <span class="fa fa-angle-right"></span></a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
+						</div>		
 						
 					</div>
 					
