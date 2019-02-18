@@ -3,8 +3,10 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+const infiniteScroll = require('vue-infinite-scroll')
 
 Vue.config.productionTip = false
+Vue.use(infiniteScroll)
 
 /* eslint-disable no-new */
 new Vue({

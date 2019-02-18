@@ -14,7 +14,7 @@
                     <div class="news-block col-md-4 col-sm-6 col-xs-12">
                         <div class="inner-box">
                             <div class="image">
-                                <router-link to="/articol"><img v-bind:src="path+post.image" alt="" /></router-link>
+                                <router-link v-bind:to="'/articol/'+post.slug"><img v-bind:src="path+post.image" alt="" /></router-link>
                                 <!-- <div class="post-date"><span>{{}}</span>{{}}</div> -->
                             </div>
                             <div class="lower-content">
@@ -43,7 +43,7 @@ export default {
             posts:  [],
             
             errors: [],
-            path: 'http://localhost:80/storage/'
+            path: 'http://68.183.75.48:80/storage/'
         }
     },
     created(){
@@ -52,7 +52,7 @@ export default {
     methods: {
         getPosts: function(){
             
-            axios.get('http://localhost:80/api/v1/breaking')
+            axios.get('http://68.183.75.48:80/api/v1/breaking')
                 .then(response => {
                     this.posts = response.data.data
                     console.log(response.data.data)

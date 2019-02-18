@@ -23,12 +23,12 @@
 						<div class="inner-box">
                             <div class="image">
                                 <img v-bind:src="path+post.image" alt=""/>
-                                <div class="post-date"><span>{{day}}</span> May</div>
+                                <div class="post-date"><span>{{day}}</span>{{month}}</div>
                             </div>
                             <div class="title-box">
                             	<h2>{{post.title}}</h2>
                                 <ul class="post-info">                                	
-                                    <li>Nume Autor </li>
+                                    <li>{{post.auth_name}}</li>
                                 </ul>
                             </div>
                             <div class="lower-content">
@@ -78,9 +78,24 @@ export default {
         return {
             post:  [],
             day: '',
+            monthList: {
+                "01": "Ian",
+                "02": "Feb",
+                "03": "Mar",
+                "04": "Apr",
+                "05": "Mai",
+                "06": "Iun",
+                "07": "Iul",
+                "08": "Aug",
+                "09": "Sep",
+                "10": "Oct",
+                "11": "Nov",
+                "12": "Dec",
+            },
             month: '',
             errors: [],
-            path: 'http://localhost:80/storage/'
+            path: 'http://68.183.75.48:80/storage/'
+            // path: 'http://localhost/storage/'
         }
     },
     created(){
@@ -91,13 +106,17 @@ export default {
         getPost: function(){
             const slug = this.$route.params.slug
             
-            axios.get('http://localhost:80/api/v1/articole/'+slug)
+            axios.get('http://68.183.75.48:80/api/v1/articole/'+slug)
+        //  axios.get('http://localhost/api/v1/articole/'+slug)
                 .then(response => {
                     this.post = response.data
+                    console.log(response.data.data)
+                    // TODO: make this better 
                     let resDate = this.post.updated_at.toString().split('-')
                     let resDay = resDate[2].split(' ')
                     this.day = resDay[0];
-                    console.log(resDate)
+                    // set pretty month 
+                    this.month = this.monthList[resDate[1]]                    
                     })
                 .catch(e => console.log(e))
             

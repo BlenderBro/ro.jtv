@@ -22,9 +22,9 @@
 					<div class="info-column col-md-6 col-sm-12 col-xs-12">
 						<div class="inner-column">
 							<div class="sec-title">
-								<h2>Get in Touch</h2>
+								<h2>Intrați in legatura cu noi</h2>
 							</div>
-							<div class="text">Thewebmax ipsum amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore agna aliquam erat. ipsum dolor sit amet, consectetuer adipiscing. ipsum dolor sit .</div>
+							<div class="text">Avem NEVOIE DE TEXT.</div>
 							<ul class="list-style-two">
 								<li><span class="icon fa fa-phone"></span>Sunati-ne la nr. +40 741 330 100</li>
 								<li><span class="icon fa fa-envelope"></span>contact@jobtv.ro</li>
@@ -35,9 +35,9 @@
 								<li class="follow">Suntem sociali: </li>
 								<li><a href="#"><span class="fa fa-facebook"></span></a></li>
 								<li><a href="#"><span class="fa fa-twitter"></span></a></li>
-								<li><a href="#"><span class="fa fa-google-plus"></span></a></li>
+								<!-- <li><a href="#"><span class="fa fa-google-plus"></span></a></li> -->
 								<li><a href="#"><span class="fa fa-instagram"></span></a></li>
-								<li><a href="#"><span class="fa fa-dribbble"></span></a></li>
+								<!-- <li><a href="#"><span class="fa fa-dribbble"></span></a></li> -->
 							</ul>
 						</div>
 					</div>

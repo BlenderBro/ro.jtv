@@ -4,41 +4,27 @@
 			<!-- <video width="320" height="240" controls>
 				<source src="../../vid.mp4" >
 				Your browser does not support the video tag.
-			</video> -->
-			<video id="vid1" controls preload="none "width="640"height="264"
+			</video> -->			
+			<video id="player" loop controls preload="auto" width="640" height="264"
 					class="video-js vjs-fluid vjs-default-skin vjs-big-play-centered"
 					data-setup='{}'>
-				<source src="http://68.183.75.48:8082/hls/test.m3u8" type="application/x-mpegURL"/>
+				<!-- <source src="http://68.183.75.48:8082/hls/test.m3u8" type="application/x-mpegURL"/> -->
+				<source src="../../loop.mp4" >
       		</video>
 		</div>
 	</div>
 </template>
 <script>
 
-// import 'videojs-youtube/dist/Youtube.min.js';
 import 'video.js/dist/video-js.min.css';
-import 'video.js/dist/video.min.js';
+// import 'video.js/dist/video.min.js';
+import videojs from 'video.js';
+
 export default {
 	name: 'WatchStream',
-	// mounted: function(){
-	// 	setTimeout(() => {
-	// 		this.collapseHeader()
-	// 	}, 2000);
-	// },
-	// methods: {
-	// 	collapseHeader: ()=>{
-	// 		let header = document.getElementsByTagName("header")[0]
-
-	// 		// collapse the header 
-	// 		header.classList.add('collapseHeader')
-	// 		// on mouse enter event, show full header
-	// 		header.onmouseenter = ()=>{
-	// 			header.classList.toggle('collapseHeader')
-	// 		}
-	// 		// on mouse leave, recollapse header
-	// 		header.onmouseleave = ()=>{header.classList.add('collapseHeader')}
-	// 	},
-	// }
+	mounted: function(){
+		this.player = videojs('#player')
+	}
 }
 </script>
 <style>

@@ -22,11 +22,11 @@
                     <div v-for="post of posts" class="news-block col-md-4 col-sm-6 col-xs-12">
                         <div class="inner-box">
                             <div class="image">
-                                <router-link to="/articol"><img v-bind:src="path+post.image" alt="" /></router-link>
+                                <router-link v-bind:to="'/articol/'+post.slug"><img v-bind:src="path+post.image" alt="" /></router-link>
                                 <!-- <div class="post-date"><span>{{}}</span>{{}}</div> -->
                             </div>
                             <div class="lower-content">
-                                <h3><router-link to="/articol">{{post.title}}</router-link></h3>
+                                <h3><router-link v-bind:to="'/articol/'+post.slug">{{post.title}}</router-link></h3>
                                 <ul class="post-meta">                            	
                                     <!-- <li>Autor:  </li> -->
                                 </ul>
@@ -38,17 +38,12 @@
                 
 			
             <!--Pagination-->
-            <!-- <div class="pagination-outer text-center">
-                
+           
+            <div class="pagination-outer text-center">
                 <ul class="styled-pagination">
-                    <li class="prev"><a href="#"><span class="fa fa-angle-double-left"></span> Prev</a></li>
-                    <li><a href="#">1</a></li>
-                    <li><a href="#" class="active">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li class="next"><a href="#">Next <span class="fa fa-angle-double-right"></span></a></li>
-                </ul>
-                
-            </div> -->
+                    <li class="prev"><a aria-disabled="" v-bind:class="{isDisabled}" id="loadMorebtn" @click="loadMore()">Mai Multe</a></li>                   
+                </ul>     
+            </div>
 
         </div>
     </section>
@@ -57,32 +52,63 @@
 </template>
 <script>
 import axios from 'axios'
-export default {
-  name: "Blog",
 
-  data: function () {
+export default {
+    name: "Blog",
+    data: function () {
         return {
             posts:  [],
+            page: 1,
+            isDisabled: false,
             errors: [],
-            path: 'http://localhost:80/storage/'
+            path: 'http://68.183.75.48:80/storage/'
+            // path: 'http://localhost/storage/'
         }
     },
     created(){
         this.getPosts()
     },
     methods: {
-        getPosts: function(){
-            
-            axios.get('http://localhost:80/api/v1/articole')
+        getPosts: function(pageNum){
+            pageNum = this.page
+            axios.get('http://68.183.75.48:80/api/v1/articole?page='+pageNum)
+            // axios.get('http://localhost/api/v1/articole?page='+pageNum)
                 .then(response => {
-                    this.posts = response.data.data
-                    console.log(response.data.data)
-                    })
-                .catch(e => console.log(e))
 
-            console.log()
+                    // iterate page number on each request
+                    this.page = response.data.current_page +1 
+                    
+                    // get total pages and disable loadMore function call                    
+                    if(this.page === response.data.last_page +1){
+                        this.isDisabled = true;
+                    }
+                    // push posts into array
+                    let postsArr = response.data.data
+                    for(let i=0; i< postsArr.length; i++){
+                        this.posts.push(postsArr[i])
+                    }                  
+                })
+                .catch(e => console.log(e))
+            
+        },
+        loadMore: function(){
+            this.getPosts();            
         }
     }
 };
 </script>
 
+<style scoped>
+.news-block{
+    min-height: 421px !important;
+}
+#loadMorebtn{
+    background-color: #f16724;
+    color: #fff;
+    border: none;
+}
+.isDisabled{
+    cursor: default;
+    background-color: #fff !important;    
+}
+</style>

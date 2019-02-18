@@ -81,7 +81,7 @@
 						</div>
 					</nav>
 					<!-- Main Menu End-->
-					<!-- <div class="outer-box clearfix">
+					<div class="outer-box clearfix">
 						
 						<ul class="options">
 							<li class="dropdown search-box-outer">
@@ -102,7 +102,7 @@
 							<li><a href="#"><span class="fa fa-cart-plus"></span></a></li>
 						</ul>
 						
-					</div> -->
+					</div>
 				</div>
 			</div>
 		</div>

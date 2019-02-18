@@ -51,7 +51,7 @@ export default {
     methods: {
         getGuides: function(){
             
-            axios.get('http://localhost:80/api/v1/guides')
+            axios.get('http://68.183.75.48:80/api/v1/guides')
                 .then(response => {
                     this.guides = response.data                    
                     })

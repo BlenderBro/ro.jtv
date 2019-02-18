@@ -87,6 +87,9 @@ export default {
 	position: absolute;
 	z-index: -1;
 }
+.contact-form .message-btn{
+	color:#fff !important;
+}
 
 </style>
 

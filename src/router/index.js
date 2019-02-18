@@ -24,7 +24,7 @@ Vue.use(Router)
 // const adminPath = window.location.replace("http://stackoverflow.com");
 
 export default new Router({
-	mode: 'history',
+	// mode: 'history',
 	base: __dirname,
 	scrollBehavior(){
 		return {x:0, y:0};
