@@ -43,7 +43,7 @@
 									<div class="overlay-two">
 										<div class="overlay-two-inner">
 											<div class="overlay-two-content">
-												<h2><router-link to="/oferte-de-munca-eu" class="see-more">Ofertele din Romania</router-link></h2>
+												<h2><router-link to="/oferte-de-munca-ro" class="see-more">Ofertele din Romania</router-link></h2>
 												<div class="text">Vezi toate ofertele de munca din Romania.</div>
 												<router-link to="/oferte-de-munca-ro" class="see-more">Arata Ofertele <span class="fa fa-angle-right"></span></router-link>
 											</div>

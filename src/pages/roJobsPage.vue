@@ -21,74 +21,54 @@
 					<h2>Oferte de lucru in Romania</h2>
 					<div class="seperater"></div>
 				</div>
-				<!--MixitUp Galery-->
-				<div class="mixitup-gallery">
+				<div class="row clearfix job-list">
 					
-					<!--Filter-->
-					<!-- <div class="filters text-center clearfix">
-						<ul class="filter-tabs filter-btns clearfix">
-							<li class="active filter" data-role="button" v-on:click="filter('all')">All</li>
-							<li class="filter" data-role="button" v-on:click="filter('renovation')">Renovation</li>
-							<li class="filter" data-role="button" v-on:click="filter('isolation')">Isolation</li>
-							<li class="filter" data-role="button" v-on:click="filter('construction')">Construction</li>
-							<li class="filter" data-role="button" v-on:click="filter('architecture')">Architecutre</li>
-						</ul>
-					</div> -->
-					
-					<div class="filter-list row clearfix">
-						
-						<!--Project Block-->
-						<div id="visible" class="project-block mix architecutre all col-md-3 col-sm-12 col-xs-12">
-							<div class="inner-box">
-								<div class="image">
-									<img src="static/images/gallery/5.jpg" alt="" />
-									<div class="overlay-box">
-										<div class="content">
-											<h3>Job</h3>
-											<div class="see-project">Detalii <span class="fa fa-angle-right"></span></div>
-										</div>
-									</div>
-									<!--Overlay Two-->
-									<div class="overlay-two">
-										<div class="overlay-two-inner">
-											<div class="overlay-two-content">
-												<h2><a href="#">Job</a></h2>
-												<div class="text">
-													Descriere scurta job
-												</div>
-												<a href="#" class="see-more">See Project <span class="fa fa-angle-right"></span></a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>						
+					<div v-for="job of jobs" class="col-md-12 job">
+						<img class="authLogo" v-bind:src="path+job.logo" alt="Company Logo">
+						<div class="job-title">
+							<h4><router-link v-bind:to="'/oferte-de-munca-ro/'+job.slug">{{job.title}}</router-link></h4>
+						</div>
+						<div class="job-text">{{job.excerpt}}</div>
+						<div class="job-location">Locatie: {{job.location}}</div>
 					</div>
-					
-					<!--Btn Box-->
-					<!-- <div class="btn-box text-center">
-						<a href="projects-single.html" class="theme-btn btn-style-three">More Project</a>
-					</div> -->
-					
 				</div>
+				<div class="seperater"></div>
 			</div>
 		</section>
 		<!--End Project Page Section-->
 	</div>
 </template>
 <script>
+import axios from 'axios';
+
 export default {
 	name:'ROjobs',
-	mounted: function(){
-		this.filter('all')
-	},
-	methods: {
-		filter: (item)=> {
-			const itemList = document.querySelectorAll('div.'+item)		
-			for(let i =0;i<itemList.length; i++){
-				itemList[i].classList.toggle('show')
-			}	
+	data: function(){
+		return {
+			jobs:  [],
+            errors: [],
+            // path: 'http://68.183.75.48:80/storage/'
+            path: 'http://localhost/public/storage/'
 		}
+	},
+	mounted: function(){
+		this.getJobs();
+			},
+	methods: {
+		getJobs: function(){
+            
+            // axios.get('http://68.183.75.48:80/api/v1/ro-jobs?page='+pageNum)
+            axios.get('http://localhost/public/api/v1/ro-jobs')
+                .then(response => {
+					this.jobs = response.data;
+					console.log(this.jobs)
+                })
+                .catch(e => console.log(e))
+            
+		},
+		loadMore: function(){
+            this.getJobs();            
+        }
 	}
 }
 </script>
@@ -96,5 +76,32 @@ export default {
 .show{
 	display: block;
 }
+#loadMorebtn{
+    background-color: #f16724;
+    color: #fff;
+    border: none;
+}
+.isDisabled{
+    cursor: default;
+    background-color: #fff !important;    
+}
+.job{
+	background-color:#ebebeb;
+	padding: 25px;
+	margin: 15px;
+	border-radius: 5px;
+}
+.authLogo{
+	float: left;
+	padding-right: 10px;
+	max-width: 100px;
+}
+.job-title{
+	font-weight: 700;
+}
+.job-location{
+	font-weight: 700;
+}
+
 </style>
 

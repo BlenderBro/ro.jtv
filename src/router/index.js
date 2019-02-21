@@ -17,6 +17,7 @@ import Contact from '@/pages/contactPage'
 
 // single for testing only
 import Single from '@/pages/singleBlogPage'
+import RoJobSingle from '@/pages/roJobSingle'
 
 
 
@@ -38,6 +39,7 @@ export default new Router({
 		{ path: '/oferte-de-munca', name: 'Jobs', component: Jobs },
 		{ path: '/oferte-de-munca-eu', name: 'EUjobs', component: EUjobs },
 		{ path: '/oferte-de-munca-ro', name: 'ROjobs', component: ROjobs },
+		{ path: '/oferte-de-munca-ro/:slug', name: 'RoJobSingle', component: RoJobSingle },
 		{ path: '/echipa', name: 'Team', component: Team },
 		{ path: '/adauga-cv', name: 'CV', component: CV },
 		{ path: '/contact', name: 'Contact', component: Contact },
