@@ -55,39 +55,27 @@
               <!--Footer Column-->
               <div class="footer-column col-md-6 col-sm-6 col-xs-12">
                 <div class="footer-widget news-widget">
-                  <h2>Breaking</h2>
+                  <h2>Ultima Ora</h2>
                   <!--News Widget Block-->
-                  <div class="news-widget-block">
-                    <div class="widget-inner">
-                      <div class="image">
-                        <img src="static/images/resource/news-image-1.jpg" alt>
-                      </div>
-                      <h3>
-                        <a href="blog-detail.html">Planning Process Needs to improve your Business.</a>
-                      </h3>
-                      <div class="post-date">28 Dec, 2017</div>
-                    </div>
-                  </div>
 
-                  <!--News Widget Block-->
-                  <div class="news-widget-block">
+                  <div v-for="post of posts.slice(0,3)" :key="post.id" class="news-widget-block">
                     <div class="widget-inner">
                       <div class="image">
-                        <img src="static/images/resource/news-image-2.jpg" alt>
+                        <!-- <router-link v-bind:to="'/articol/'+post.slug"><img v-bind:src="path+post.image" alt="" /></router-link> -->
+                        <router-link @click.native="fireReloadEvent" v-bind:to="{path: '/articol/'+post.slug}"><img v-bind:src="path+post.image" alt="" /></router-link>
                       </div>
-                      <h3>
-                        <a href="blog-detail.html">7 Tips To Move Your Project Move Forward.</a>
-                      </h3>
-                      <div class="post-date">13 Oct, 2017</div>
+                      <h3><router-link @click.native="fireReloadEvent" v-bind:to="{path: '/articol/'+post.slug}">{{post.title}}</router-link></h3>
+                      
                     </div>
                   </div>
+                  
                 </div>
               </div>
 
               <!--Footer Column-->
               <div class="footer-column col-md-6 col-sm-6 col-xs-12">
                 <div class="footer-widget map-widget">
-                  <h2>Our Branches</h2>
+                  <h2 id="black">Our Branches</h2>
                   <div class="image">
                     <img src="static/images/resource/map.png" alt>
                   </div>
@@ -109,14 +97,14 @@
           <div class="column col-md-6 col-sm-12 col-xs-12">
             <ul class="footer-nav">
               <li>
-                <a href="#">Termeni si Conditii</a>
+               <router-link to="/politica-de-confidentialitate">Politica de Confidentialitate</router-link>
               </li>
-              <li>
+              <!-- <li>
                 <a href="#">ANPC</a>
               </li>
               <li>
                 <a href="#">Cookies</a>
-              </li>
+              </li> -->
               <li>
 				  <router-link to="/contact">Contact</router-link>
 			  </li>
@@ -129,17 +117,40 @@
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
   name: "Footer",
   data() {
     return {
-      year: ""
+      year: "",
+      posts:  [],            
+      errors: [],
+      path: 'http://admin.jobtv.ro/storage/'
     };
   },
-  created: function() {
-    let year = new Date().getFullYear();
-    this.year = year;
-  }
+  created(){
+      this.getDate();
+      this.getPosts();
+  },
+  methods: {
+        getPosts: function(){
+            
+            axios.get('http://admin.jobtv.ro/api/v1/breaking')
+                .then(response => {
+                    this.posts = response.data.data                    
+                    })
+                .catch(e => console.log(e))
+
+            console.log()
+        },
+        getDate: function(){
+          this.year = new Date().getFullYear();
+        },
+        fireReloadEvent: function(){
+          this.$root.$emit('on', 'reload');
+        }
+    }
 };
 </script>
 <style>
@@ -148,6 +159,9 @@ footer .footer-bottom .copyright {
 }
 footer .footer-bottom .footer-nav li a {
   font-size: 12px;
+}
+h2#black{
+    color: #242424;
 }
 </style>
 

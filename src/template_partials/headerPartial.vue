@@ -17,8 +17,8 @@
 						<div class="upper-column info-box onAir">
 							<div class="icon-box"><span class="flaticon-clock"></span></div>
 							<ul>
-								<li><strong>ON AIR</strong></li>
-								<li>Intra cu noi IN DIRECT</li>
+								<li><strong>ON AIR</strong></li>								
+								<router-link to="/intra-in-direct">Intra cu noi IN DIRECT</router-link>
 							</ul>
 						</div>
 						

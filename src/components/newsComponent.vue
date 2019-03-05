@@ -4,7 +4,7 @@
     	<div class="auto-container">
         	<div class="sec-title centered">
             	<div class="title">Stiri</div>
-                <h2>Breaking News</h2>
+                <h2>Ultima Ora</h2>
                 <div class="seperater"></div>
             </div>
             <div class="row clearfix">
@@ -43,7 +43,7 @@ export default {
             posts:  [],
             
             errors: [],
-            path: 'http://68.183.75.48:80/storage/'
+            path: 'http://admin.jobtv.ro/storage/'
         }
     },
     created(){
@@ -52,7 +52,7 @@ export default {
     methods: {
         getPosts: function(){
             
-            axios.get('http://68.183.75.48:80/api/v1/breaking')
+            axios.get('http://admin.jobtv.ro/api/v1/breaking')
                 .then(response => {
                     this.posts = response.data.data
                     console.log(response.data.data)

@@ -47,8 +47,8 @@ export default {
 		return {
 			jobs:  [],
             errors: [],
-            // path: 'http://68.183.75.48:80/storage/'
-            path: 'http://localhost/public/storage/'
+            path: 'http://admin.jobtv.ro/storage/'
+            // path: 'http://localhost/public/storage/'
 		}
 	},
 	mounted: function(){
@@ -57,8 +57,8 @@ export default {
 	methods: {
 		getJobs: function(){
             
-            // axios.get('http://68.183.75.48:80/api/v1/ro-jobs?page='+pageNum)
-            axios.get('http://localhost/public/api/v1/ro-jobs')
+            axios.get('http://admin.jobtv.ro/api/v1/ro-jobs')
+            // axios.get('http://localhost/public/api/v1/ro-jobs')
                 .then(response => {
 					this.jobs = response.data;
 					console.log(this.jobs)

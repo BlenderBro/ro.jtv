@@ -3,6 +3,7 @@ import Router from 'vue-router'
 
 // import pages here
 import PageNotFound from '@/pages/404'
+import Success from '@/pages/success'
 import Home from '@/pages/homePage'
 import About from '@/pages/aboutPage'
 import Schedule from '@/pages/schedulePage'
@@ -14,6 +15,8 @@ import CV from '@/pages/cvPage'
 import Team from '@/pages/teamPage'
 import Blog from '@/pages/blogPage'
 import Contact from '@/pages/contactPage'
+import Terms from '@/pages/termsPage'
+import Skype from '@/pages/skype'
 
 // single for testing only
 import Single from '@/pages/singleBlogPage'
@@ -34,6 +37,7 @@ export default new Router({
 	},
 	routes: [
 		{path: '*', name:'404', component: PageNotFound},
+		{path: '/success', name:'success', component: Success},
 		{ path: '/', name: 'Home', component: Home },
 		{ path: '/despre-noi', name: 'About', component: About },
 		{ path: '/program', name: 'Schedule', component: Schedule },
@@ -47,7 +51,9 @@ export default new Router({
 		{ path: '/contact', name: 'Contact', component: Contact },
 		{ path: '/stiri', name: 'News', component: Blog },
 		{ path: '/articol/:slug', name: 'Single', component: Single },
-		{ path: '/live', name: 'WatchStream', component: WatchStream }
+		{ path: '/live', name: 'WatchStream', component: WatchStream },
+		{ path: '/politica-de-confidentialitate', name: 'Terms', component: Terms },
+		{ path: '/intra-in-direct', name: 'Skype', component: Skype }
 		// { path: '/admin', name: 'WatchStream', redirect: adminPath}
 	]
 })

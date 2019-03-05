@@ -39,7 +39,7 @@
 							</div>
 							<div class="lower-box">
 								<h3><a href="#">Sorin Voinea</a></h3>
-								<div class="designation">Builder Advisor</div>
+								<div class="designation">General Manager</div>
 							</div>
 						</div>
 					</div>
@@ -58,10 +58,29 @@
 							</div>
 							<div class="lower-box">
 								<h3><a href="#">Sorin Petre</a></h3>
-								<div class="designation">Project Manager</div>
+								<div class="designation">Editor Montaj</div>
 							</div>
 						</div>
-					</div>		
+					</div>	
+
+					<!--Team Block-->
+					<div class="team-block col-md-4 col-sm-6 col-xs-12">
+						<div class="inner-box">
+							<ul class="social-icon-one">
+								<li><a href="#"><span class="fa fa-facebook"></span></a></li>
+								<li><a href="#"><span class="fa fa-twitter"></span></a></li>
+								<li><a href="#"><span class="fa fa-dribbble"></span></a></li>
+								<li><a href="#"><span class="fa fa-pinterest-p"></span></a></li>
+							</ul>
+							<div class="image">
+								<img src="../assets/team/Tommy.png" alt="" />
+							</div>
+							<div class="lower-box">
+								<h3><a href="#">Tomita Stoicut</a></h3>
+								<div class="designation">Editor Stiri</div>
+							</div>
+						</div>
+					</div>	
 				
 					
 				</div>

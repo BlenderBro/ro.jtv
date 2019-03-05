@@ -1,5 +1,5 @@
 <template>
-  <div class="page">
+     <div class="page">
     <!--Page Title-->
     <!-- <section class="page-title" style="background-color:#333333">
       <div class="auto-container">
@@ -23,14 +23,15 @@
 						<div class="inner-box">
                             
                             <div class="title-box">
-                            	<h2>{{job.title}}</h2>
-                                <ul class="post-info">                                	
-                                    <!-- <li>{{post.auth_name}}</li> -->
-                                </ul>
+                            	<h2>Salut,</h2>
+                                
                             </div>
                             <div class="lower-content">
-                            	<div v-html="job.description" class="text">
-                                	                                    
+                            	<div class="text">
+                                    <h3>Daca ai Skype instalat, <a href="skype:live:contact_91123?call">Intra cu noi IN DIRECT</a></h3>
+
+                                	In cazul in care Skype nu este instalat pe telefonul/calculatoru tau, te invitam sa il obtii de aici <a href="https://www.skype.com/ro/">https://www.skype.com/ro/</a>  
+
                                 </div>
                                 
                                 <!--post-share-options-->
@@ -58,9 +59,6 @@
                         
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
-                    <img class="authLogo" v-bind:src="path+job.logo" alt="Company Logo">
-                </div>
                 
                
                 
@@ -69,38 +67,9 @@
     </div>
   </div>
 </template>
+
 <script>
-import axios from 'axios'
 export default {
-  name: "EuJobSingle",
-
-  data: function () {
-        return {
-            job:  [],
-            errors: [],
-            path: 'http://admin.jobtv.ro/storage/'
-            // path: 'http://localhost/public/storage/'
-        }
-    },
-    created(){
-        this.getPost()
-        console.log()
-    },
-    methods: {
-        getPost: function(){
-            const slug = this.$route.params.slug
-            
-            axios.get('http://admin.jobtv.ro/api/v1/eu-jobs/'+slug)
-        //  axios.get('http://localhost/public/api/v1/eu-jobs/'+slug)
-                .then(response => {
-                    this.job = response.data
-                    console.log(response.data)
-                          
-                    })
-                .catch(e => console.log(e))
-            
-        }
-    }
-};
+    name: 'Skype'
+}
 </script>
-

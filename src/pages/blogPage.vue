@@ -30,7 +30,8 @@
                                 <ul class="post-meta">                            	
                                     <!-- <li>Autor:  </li> -->
                                 </ul>
-                                <div class="text">{{post.excerpt}}</div>
+                                <div v-if="post.excerpt.length < 140" class="text">{{post.excerpt}}</div>
+                                <div v-if="post.excerpt.length >= 140" class="text">{{post.excerpt.substring(0, 140)+" .."}}</div>
                             </div>
                         </div>
                     </div>               
@@ -61,8 +62,8 @@ export default {
             page: 1,
             isDisabled: false,
             errors: [],
-            path: 'http://68.183.75.48:80/storage/'
-            // path: 'http://localhost/storage/'
+            path: 'http://admin.jobtv.ro/storage/'
+            // path: 'http://localhost/public/storage/'
         }
     },
     created(){
@@ -71,8 +72,8 @@ export default {
     methods: {
         getPosts: function(pageNum){
             pageNum = this.page
-            axios.get('http://68.183.75.48:80/api/v1/articole?page='+pageNum)
-            // axios.get('http://localhost/api/v1/articole?page='+pageNum)
+            axios.get('http://admin.jobtv.ro/api/v1/articole?page='+pageNum)
+            // axios.get('http://localhost/public/api/v1/articole?page='+pageNum)
                 .then(response => {
 
                     // iterate page number on each request

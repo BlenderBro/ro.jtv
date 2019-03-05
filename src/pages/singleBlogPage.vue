@@ -94,23 +94,41 @@ export default {
             },
             month: '',
             errors: [],
-            path: 'http://68.183.75.48:80/storage/'
+            path: 'http://admin.jobtv.ro/storage/'
             // path: 'http://localhost/storage/'
         }
     },
     created(){
-        this.getPost()
-        console.log()
+        this.getPost()        
+    },
+    mounted: function(){
+        // this is not DRY but works for now
+        // TODO: Refactor this crap
+        this.$root.$on('on', () => {
+            const slug = this.$route.params.slug
+            
+            axios.get('http://admin.jobtv.ro/api/v1/articole/'+slug)
+        //  axios.get('http://localhost/api/v1/articole/'+slug)
+                .then(response => {
+                    this.post = response.data                    
+                    // TODO: make this better 
+                    let resDate = this.post.updated_at.toString().split('-')
+                    let resDay = resDate[2].split(' ')
+                    this.day = resDay[0];
+                    // set pretty month 
+                    this.month = this.monthList[resDate[1]]                    
+                    })
+                .catch(e => console.log(e))
+        })
     },
     methods: {
         getPost: function(){
             const slug = this.$route.params.slug
             
-            axios.get('http://68.183.75.48:80/api/v1/articole/'+slug)
+            axios.get('http://admin.jobtv.ro/api/v1/articole/'+slug)
         //  axios.get('http://localhost/api/v1/articole/'+slug)
                 .then(response => {
-                    this.post = response.data
-                    console.log(response.data.data)
+                    this.post = response.data                    
                     // TODO: make this better 
                     let resDate = this.post.updated_at.toString().split('-')
                     let resDay = resDate[2].split(' ')

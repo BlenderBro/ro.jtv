@@ -15,9 +15,9 @@
 		<!--Faq Section-->
 		<section class="faq-page-section">
 			<div class="auto-container">
-					<div class="sec-title">
-						<h2>De luni pana vineri:</h2>
-					</div>
+				<div class="sec-title">
+					<h2>De luni pana vineri:</h2>
+				</div>
 				<div  v-for="guide of guides" class="row clearfix">
 					<div class="col-md-4 col-xs-4 title">
 						<span class="hours">{{guide.time_slot}}</span> 
@@ -26,8 +26,20 @@
 					<div class="col-md-8 col-xs-8 desc">
 						<p v-html="guide.description"></p>
 					</div>						
+				</div>		
+				<hr>
+				<div class="sec-title">
+					<h2>Weekend:</h2>
 				</div>
-				
+				<div  v-for="weekend of weekends" class="row clearfix">
+					<div class="col-md-4 col-xs-4 title">
+						<span class="hours">{{weekend.time_slot}}</span> 
+						<p>{{weekend.title}}</p>
+					</div>
+					<div class="col-md-8 col-xs-8 desc">
+						<p v-html="weekend.description"></p>
+					</div>						
+				</div>				
 			</div>
 		</section>
 		<!--End Faq Section-->   
@@ -40,25 +52,38 @@ export default {
 
 	data: function () {
         return {
-            guides:  [],
+			guides:  [],
+			weekends: [],
             errors: [],
             // path: 'http://localhost:80/storage/'
         }
     },
     created(){
-        this.getGuides()
+		this.getGuides();
+		this.getWeGuides();
     },
     methods: {
         getGuides: function(){
             
-            axios.get('http://68.183.75.48:80/api/v1/guides')
+            axios.get('http://admin.jobtv.ro/api/v1/guides')
                 .then(response => {
                     this.guides = response.data                    
                     })
                 .catch(e => console.log(e))
 
             console.log()
-        }
+		},
+		 getWeGuides: function(){
+            
+            axios.get('http://admin.jobtv.ro/api/v1/we-guides')
+            // axios.get('http://localhost/public/api/v1/we-guides')
+                .then(response => {
+                    this.weekends = response.data                    
+                    })
+                .catch(e => console.log(e))
+
+            console.log()
+		}
     }
 }
 </script>

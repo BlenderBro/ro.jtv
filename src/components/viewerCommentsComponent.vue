@@ -11,10 +11,10 @@
 				<div class="col-md-6 col-sm-12">
 					<div class="testimonial-block">
 						<div class="inner-box">
-							<div class="image"><img src="../assets/avatars/m.png" alt="" /></div>
+							<div class="image"><img src="../assets/avatars/1.jpg" alt="" /></div>
 							<div class="content">
-								<h3>John Christopher</h3>                            
-								<div class="text">“Makin their way the only way they know how that’s just a little bit more than the law will allow these happy days are you. leads a rag tag fugitive fleet on a lonely”</div>
+								<h3>Carmen Sabău, Brașov</h3>                            
+								<div class="text">"Excelentă ideea înființării JOB TV! Ma va ajuta enorm in munca mea de recrutare personal pentru domeniul hotelier din Franta si Elveția. A fost o plăcere sa va trec pragul. Mult succes JOB TV!"</div>
 							</div>
 						</div>
                 	</div>     
@@ -22,10 +22,10 @@
 				<div class="col-md-6 col-sm-12">
 					<div class="testimonial-block">
 						<div class="inner-box">
-							<div class="image"><img src="../assets/avatars/f.png" alt="" /></div>
+							<div class="image"><img src="../assets/avatars/2.jpg" alt="" /></div>
 							<div class="content">
-								<h3>Stuakrt Mackey</h3>                            
-								<div class="text">“Makin their way the only way they know how that’s just a little bit more than the law will allow these happy days are you. leads a rag tag fugitive fleet on a lonely”</div>
+								<h3>Denis Udrea, Bucuresti</h3>                            
+								<div class="text">"Pasiunea mea este fotografia, însă cand am vazut aparatura de ultima generație 4K am decis, pe loc, ca pot încerca sa imi indeplinesc visul de a fi magicianul imaginilor ca operator de platou. Mulțumesc JOB TV!"</div>
 							</div>
 						</div>
 					</div>

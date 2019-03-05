@@ -1,9 +1,9 @@
 <template>
 <div>
 	<MainSliderComp></MainSliderComp>
-	<AdsComp></AdsComp>
 	<BreakingNewsComp></BreakingNewsComp>
 	<CommentsComp></CommentsComp>
+	<AdsComp></AdsComp>
 </div>	
 </template>
 

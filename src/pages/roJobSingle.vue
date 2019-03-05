@@ -78,8 +78,8 @@ export default {
         return {
             job:  [],
             errors: [],
-            // path: 'http://68.183.75.48:80/storage/'
-            path: 'http://localhost/public/storage/'
+            path: 'http://admin.jobtv.ro/storage/'
+            // path: 'http://localhost/public/storage/'
         }
     },
     created(){
@@ -90,8 +90,8 @@ export default {
         getPost: function(){
             const slug = this.$route.params.slug
             
-            // axios.get('http://68.183.75.48:80/api/v1/ro-job/'+slug)
-         axios.get('http://localhost/public/api/v1/ro-jobs/'+slug)
+            axios.get('http://admin.jobtv.ro/api/v1/ro-jobs/'+slug)
+        //  axios.get('http://localhost/public/api/v1/ro-jobs/'+slug)
                 .then(response => {
                     this.job = response.data
                     console.log(response.data)

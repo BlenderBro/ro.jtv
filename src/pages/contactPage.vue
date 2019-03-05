@@ -23,8 +23,7 @@
 						<div class="inner-column">
 							<div class="sec-title">
 								<h2>Intrați in legatura cu noi</h2>
-							</div>
-							<div class="text">Avem NEVOIE DE TEXT.</div>
+							</div>							
 							<ul class="list-style-two">
 								<li><span class="icon fa fa-phone"></span>Sunati-ne la nr. +40 741 330 100</li>
 								<li><span class="icon fa fa-envelope"></span>contact@jobtv.ro</li>

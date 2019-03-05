@@ -1,31 +1,35 @@
 <template>
 	<div class="page">
 		<div class="videoWrapper">
-			<!-- <video width="320" height="240" controls>
-				<source src="../../vid.mp4" >
-				Your browser does not support the video tag.
-			</video> -->			
-			<video id="player" loop controls preload="auto" width="640" height="264"
+						
+			<video id="player" loop controls autoplay preload="auto" width="640" height="264"
 					class="video-js vjs-fluid vjs-default-skin vjs-big-play-centered"
 					data-setup='{}'>
-				<!-- <source src="http://68.183.75.48:8082/hls/test.m3u8" type="application/x-mpegURL"/> -->
-				<source src="../../loop.mp4" >
+				<source src="http://mediafilmcenter.eu:1935/live/myStream/playlist.m3u8" type="application/x-mpegURL"/>				
       		</video>
+			
 		</div>
 	</div>
 </template>
 <script>
 
 import 'video.js/dist/video-js.min.css';
-// import 'video.js/dist/video.min.js';
 import videojs from 'video.js';
+// require('videojs-contrib-media-sources'); // increase browser support with MSE polyfill
+// require('videojs-contrib-hls.js'); // auto attaches hlsjs handler
 
 export default {
 	name: 'WatchStream',
 	mounted: function(){
-		this.player = videojs('#player')
+		this.player = videojs('#player');
+		this.player.play();
+		
 	}
 }
+/*
+wowza crap
+Access-Control-Allow-Origin: *|Access-Control-Expose-Headers: Date, Server, Content-Type, Content-Length | Access-Control-Allow-Methods: OPTIONS, GET| Access-Control-Allow-Headers: Content-Type, User-Agent, If-Modified-Since, Cache-Control, Range
+*/
 </script>
 <style>
 .collapseHeader{
